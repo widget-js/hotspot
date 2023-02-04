@@ -18,8 +18,8 @@
 
 ### Windows 10/11 客户端下载
 
-https://www.microsoft.com/store/productId/9NPR50GQ7T53
-https://haihaihai.vip
+1. https://www.microsoft.com/store/productId/9NPR50GQ7T53
+2. https://haihaihai.vip
 
 ### 项目目录结构
 
@@ -42,15 +42,14 @@ widgets
 
 ### 运行项目
 #### 1.下载并运行桌面组件客户端
-https://www.microsoft.com/store/productId/9NPR50GQ7T53
-https://haihaihai.vip
+1. https://www.microsoft.com/store/productId/9NPR50GQ7T53
+2. https://haihaihai.vip
 
 #### 2.克隆代码并下载依赖
 
 ```shell
 #克隆代码
 git clone https://github.com/widget-js/hotspot.git
-
 ```
 #### 3.到项目目录下载依赖
 ```shell
