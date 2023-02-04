@@ -1,25 +1,24 @@
 <template>
   <div class="zhihu-box">
-    <div class="zhihu__top-box">
-      <div class="zhihu__logo"/>
-      <div class="zhihu__top-nav">
-        <span class="hot_text zhihu__nav-item" :class="{active: activeNav == 'hot'}"
+    <div class="zhihu-header">
+      <div class="zhihu-logo"/>
+      <div class="zhihu-top-nav">
+        <span class="hot_text zhihu-nav-item" :class="{active: activeNav == 'hot'}"
               @click="handleChangeNav('hot')">热榜</span>
-        <span class="news_text zhihu__nav-item" :class="{active: activeNav == 'news'}" @click="handleChangeNav('news')">日报</span>
+        <span class="news_text zhihu-nav-item" :class="{active: activeNav == 'news'}" @click="handleChangeNav('news')">日报</span>
       </div>
-      <div class="zhihu_liukanshan"/>
+      <div class="zhihu-liukanshan"/>
     </div>
     <el-scrollbar :height="widgetParams.heightPx - 64" :wrap-style="{backgroundColor:'white',borderRadius:'12px'}">
-      <div class="zhihu__content">
-
-        <div class="zhihu__content-item" v-for="(item, index) in viewList" :key="index">
-          <div class="zhihu__desc" @click="openLink(item.url)">
-            <div class="zhihu__serial-num" :level="index + 1">{{ index + 1 }}</div>
-            <div class="zhihu__title">{{ item.title }}</div>
+      <div class="zhihu-content" >
+        <div class="zhihu-content-item"  v-for="(item, index) in viewList" :key="index">
+          <div class="zhihu-desc" @click="openLink(item.url)">
+            <div class="zhihu-serial-num" :level="index + 1">{{ index + 1 }}</div>
+            <div class="zhihu-title">{{ item.title }}</div>
           </div>
-          <div class="zhihu__hot" @click="openLink(item.url)" v-if="item.hot">
+          <div class="zhihu-hot" v-if="item.hot" @click="openLink(item.url)">
             <span class="mgc_fire_fill"/>
-            <span class="zhihu__hot-count">{{ item.hot }}</span>
+            <span class="zhihu-hot-count">{{ item.hot.replaceAll(" ", '') }}</span>
           </div>
         </div>
       </div>
@@ -123,7 +122,7 @@ const newsService = axios.create({
   padding: 16px;
 
   // 顶部
-  .zhihu__top-box {
+  .zhihu-header {
     position: relative;
     width: 100%;
     display: flex;
@@ -131,13 +130,14 @@ const newsService = axios.create({
     align-items: center;
     padding-bottom: 14px;
 
-    .zhihu__logo {
+    .zhihu-logo {
       width: 35px;
       height: 16px;
       background-image: url("@/widgets/zhihu/images/logo.svg");
       background-size: cover;
       position: relative;
       margin-right: 8px;
+
       &::after {
         position: absolute;
         content: "";
@@ -151,11 +151,11 @@ const newsService = axios.create({
       }
     }
 
-    .zhihu__top-nav {
+    .zhihu-top-nav {
       color: #fff;
       font-size: 14px;
 
-      .zhihu__nav-item {
+      .zhihu-nav-item {
         margin-left: 12px;
         cursor: pointer;
       }
@@ -168,7 +168,7 @@ const newsService = axios.create({
       }
     }
 
-    .zhihu_liukanshan {
+    .zhihu-liukanshan {
       position: absolute;
       bottom: -2px;
       right: 20px;
@@ -185,14 +185,14 @@ const newsService = axios.create({
   }
 
   // 内容
-  .zhihu__content {
+  .zhihu-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
+    cursor: pointer;
     padding: 8px;
 
-    .zhihu__content-item {
+    .zhihu-content-item {
       display: flex;
       font-size: 14px;
       height: 18px;
@@ -201,14 +201,14 @@ const newsService = axios.create({
       width: 100%;
       justify-content: space-between;
 
-      .zhihu__desc {
+      .zhihu-desc {
         display: flex;
         flex: 1;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
 
-        .zhihu__serial-num {
+        .zhihu-serial-num {
           background-color: #D2D2D2FF;
           border-radius: 6px;
           width: 18px;
@@ -229,7 +229,7 @@ const newsService = axios.create({
           }
         }
 
-        .zhihu__title {
+        .zhihu-title {
           font-weight: 500;
           margin-left: 8px;
           height: inherit;
@@ -243,9 +243,8 @@ const newsService = axios.create({
         }
       }
 
-      .zhihu__hot {
+      .zhihu-hot {
         &-count {
-          width: 4em;
           display: inline-block;
         }
 

@@ -19,8 +19,9 @@
 
 ### Windows 10/11 客户端下载
 
-1. https://www.microsoft.com/store/productId/9NPR50GQ7T53
-2. https://haihaihai.vip
+- https://www.microsoft.com/store/productId/9NPR50GQ7T53
+- 或
+- https://haihaihai.vip
 
 ### 项目目录结构
 
@@ -43,8 +44,9 @@ widgets
 
 ### 运行项目
 #### 1.下载并运行桌面组件客户端
-1. https://www.microsoft.com/store/productId/9NPR50GQ7T53
-2. https://haihaihai.vip
+- https://www.microsoft.com/store/productId/9NPR50GQ7T53
+- 或
+- https://haihaihai.vip
 
 #### 2.克隆代码
 

@@ -6,13 +6,13 @@
       <div class="bilibili-title">热搜</div>
     </div>
     <el-scrollbar :height="widgetParams.heightPx - 64" :wrap-style="{backgroundColor:'white',borderRadius:'12px'}">
-      <div class="bilibili-content">
-        <div class="bilibili-content-item" v-for="(item, index) in viewList" :key="index">
-          <div class="bilibili-desc" @click="openLink(item.keyword)">
+      <div class="bilibili-content" >
+        <div class="bilibili-content-item" v-for="(item, index) in viewList" :key="index" @click="openLink(item.keyword)">
+          <div class="bilibili-desc" >
             <div class="bilibili-serial-num" :level="index + 1">{{ index + 1 }}</div>
             <div class="bilibili-title">{{ item.show_name }}</div>
           </div>
-          <img v-if="item.icon" :src="item.icon" style="height: 18px" alt="">
+          <img v-if="item.icon" :src="item.icon" style="height: 18px" alt="" >
         </div>
       </div>
     </el-scrollbar>
@@ -103,6 +103,7 @@ const service = axios.create({
     padding: 8px;
 
     .bilibili-content-item {
+      cursor: pointer;
       display: flex;
       font-size: 14px;
       height: 18px;

@@ -6,12 +6,13 @@
     </div>
     <el-scrollbar :height="widgetParams.heightPx - 64" :wrap-style="{backgroundColor:'white',borderRadius:'12px'}">
       <div class="weibo-content">
-        <div class="weibo-content-item" v-for="(item, index) in viewList" :key="index">
-          <div class="weibo-desc" @click="openLink(item.word)">
+        <div class="weibo-content-item" v-for="(item, index) in viewList" :key="index" @click="openLink(item.word)">
+          <div class="weibo-desc">
             <div class="weibo-serial-num" :level="index + 1">{{ index + 1 }}</div>
             <div class="weibo-title">{{ item.word }}</div>
           </div>
-          <span class="weibo-label" :style="{backgroundColor:item.small_icon_desc_color}">{{item.icon_desc}}</span>
+          <span class="weibo-label" :style="{backgroundColor:item.small_icon_desc_color}"
+                v-if="getLabel(item)">{{ getLabel(item) }}</span>
         </div>
       </div>
     </el-scrollbar>
@@ -43,6 +44,16 @@ useIntervalFn(() => {
 
 function openLink(keyword: string) {
   BrowserWindowApi.openUrl(`https://s.weibo.com/weibo?q=${keyword}`)
+}
+
+function getLabel(item: WeiBoModel): string {
+  if (item.icon_desc) {
+    return item.icon_desc
+  } else if (item.label_name) {
+    return item.label_name
+  } else {
+    return item.small_icon_desc
+  }
 }
 
 // 知乎热榜
@@ -82,6 +93,7 @@ const service = axios.create({
     color: #000;
     font-size: 14px;
     font-weight: bold;
+
     .logo {
       position: absolute;
       right: 8px;
@@ -105,12 +117,13 @@ const service = axios.create({
       display: flex;
       font-size: 14px;
       height: 18px;
+      cursor: pointer;
       line-height: 18px;
       margin-bottom: 16px;
       width: 100%;
       justify-content: space-between;
 
-      .weibo-label{
+      .weibo-label {
         width: 18px;
         height: 18px;
         font-size: 12px;
@@ -118,6 +131,7 @@ const service = axios.create({
         color: white;
         border-radius: 4px;
       }
+
       .weibo-desc {
         display: flex;
         flex: 1;
