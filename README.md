@@ -46,7 +46,7 @@ widgets
 1. https://www.microsoft.com/store/productId/9NPR50GQ7T53
 2. https://haihaihai.vip
 
-#### 2.克隆代码并下载依赖
+#### 2.克隆代码
 
 ```shell
 #克隆代码
