@@ -1,0 +1,18 @@
+{
+  "name": "cn.widgetjs.widgets.hotspot",
+  "author": "Widget JS",
+  "homepage": "https://widgetjs.cn",
+  "description": {
+    "zh": "全网热点组件"
+  },
+  "entry": "index.html",
+  "version": "0.0.1",
+  "hash": true,
+  "devOptions": {
+    "folder": "./src/widgets/",
+    "storybook": true,
+    "route": true,
+    "devUrl": "http://localhost:5173"
+  },
+  "widgets": []
+}
