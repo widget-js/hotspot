@@ -2,16 +2,16 @@
   <div class="weibo-box">
     <div class="weibo_header">
       <img src="./images/weibo.svg" style="margin-right: 8px" height="18" alt="">
-      <div class="weibo__top-nav">微博热搜</div>
+      <div class="weibo-top-nav">微博热搜</div>
     </div>
     <el-scrollbar :height="widgetParams.heightPx - 64" :wrap-style="{backgroundColor:'white',borderRadius:'12px'}">
       <div class="weibo-content">
         <div class="weibo-content-item" v-for="(item, index) in viewList" :key="index">
-          <div class="weibo__desc" @click="openLink(item.word)">
-            <div class="weibo__serial-num" :level="index + 1">{{ index + 1 }}</div>
-            <div class="weibo__title">{{ item.word }}</div>
+          <div class="weibo-desc" @click="openLink(item.word)">
+            <div class="weibo-serial-num" :level="index + 1">{{ index + 1 }}</div>
+            <div class="weibo-title">{{ item.word }}</div>
           </div>
-          <span class="weibo-label" :style="{backgroundColor:item.small_icon_desc_color}">{{item.label_name}}</span>
+          <span class="weibo-label" :style="{backgroundColor:item.small_icon_desc_color}">{{item.icon_desc}}</span>
         </div>
       </div>
     </el-scrollbar>
@@ -89,7 +89,7 @@ const service = axios.create({
 
   }
 
-  .el-scrollbar__wrap .el-scrollbar__wrap--hidden-default {
+  .el-scrollbar-wrap .el-scrollbar-wrap--hidden-default {
     background-color: #fff;
     border-radius: 16px;
   }
@@ -113,18 +113,19 @@ const service = axios.create({
       .weibo-label{
         width: 18px;
         height: 18px;
+        font-size: 12px;
         text-align: center;
         color: white;
         border-radius: 4px;
       }
-      .weibo__desc {
+      .weibo-desc {
         display: flex;
         flex: 1;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
 
-        .weibo__serial-num {
+        .weibo-serial-num {
           background-color: #D2D2D2FF;
           border-radius: 6px;
           width: 18px;
@@ -145,7 +146,7 @@ const service = axios.create({
           }
         }
 
-        .weibo__title {
+        .weibo-title {
           font-weight: 500;
           margin-left: 8px;
           height: inherit;
@@ -159,7 +160,7 @@ const service = axios.create({
         }
       }
 
-      .weibo__hot {
+      .weibo-hot {
         &-count {
           width: 4em;
           display: inline-block;
