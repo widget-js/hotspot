@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/github/license/widget-js/widgets" alt="">
   <a href="https://discord.gg/vwSAaRR8cT"><img src="https://img.shields.io/badge/chat-on%20discord-7289da.svg?sanitize=true" alt="Chat"></a>
 
-![png](screenshot.png)
+![png](screenshot.jpg)
 
 ### 说明
 
