@@ -1,6 +1,6 @@
 import WeiBoWidgetDefine from "./WeiBo.widget";
 
-const url = WeiBoWidgetDefine.url;
+const url = WeiBoWidgetDefine.getIndexRoute().url;
 const name = WeiBoWidgetDefine.name;
 
 const WeiBoWidgetRoutes = [

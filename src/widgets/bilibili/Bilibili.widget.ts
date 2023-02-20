@@ -17,15 +17,19 @@ const BilibiliWidgetDefine = new Widget({
     description: description,
     keywords: keywords,
     lang: "zh",
-    url: url,
-    configUrl: configUrl,
     width: 4,
     height: 3,
     previewImage: '/images/bilibili_hot_search.png',
     minWidth: 4,
     maxWidth: 6,
     minHeight: 3,
-    maxHeight: 6
+    maxHeight: 6,
+    routes: [
+        {
+            url: url,
+            name: 'index'
+        }
+    ]
 })
 
 export default BilibiliWidgetDefine;

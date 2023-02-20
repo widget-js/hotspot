@@ -18,7 +18,13 @@ const minHeight = 3;
 const maxHeight = 4;
 const ZhihuWidgetDefine = new Widget({
     previewImage: "/images/preview_zhihu.png",
-    name, title, description, keywords, lang, width, height, maxWidth, maxHeight, minWidth, minHeight, url, configUrl
+    name, title, description, keywords, lang, width, height, maxWidth, maxHeight, minWidth, minHeight,
+    routes: [
+        {
+            url: url,
+            name: 'index'
+        }
+    ]
 })
 
 export default ZhihuWidgetDefine;
