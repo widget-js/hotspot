@@ -10,7 +10,7 @@
   "hash": true,
   "devOptions": {
     "folder": "./src/widgets/",
-    "storybook": true,
+    "storybook": false,
     "route": true,
     "devUrl": "http://localhost:5173"
   },

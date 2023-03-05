@@ -96,5 +96,6 @@ pnpm widget create
 
 
 #### 抖音热榜
-
-开发中
+![png](public/images/preview_douyin.png)
+- 代码路径：/widgets/douyin
+- 组件路由：/widget/douyin

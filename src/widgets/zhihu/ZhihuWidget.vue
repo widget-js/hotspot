@@ -1,30 +1,33 @@
 <template>
-  <div class="zhihu-box">
-    <div class="zhihu-header">
-      <div class="zhihu-logo"/>
-      <div class="zhihu-top-nav">
+  <HotspotBox class="zhihu-box" :height="widgetParams.heightPx">
+    <template #header>
+      <div class="zhihu-header">
+        <div class="zhihu-logo"/>
+        <div class="zhihu-top-nav">
         <span class="hot_text zhihu-nav-item" :class="{active: activeNav == 'hot'}"
               @click="handleChangeNav('hot')">热榜</span>
-        <span class="news_text zhihu-nav-item" :class="{active: activeNav == 'news'}" @click="handleChangeNav('news')">日报</span>
+          <span class="news_text zhihu-nav-item" :class="{active: activeNav == 'news'}" @click="handleChangeNav('news')">日报</span>
+        </div>
+        <div class="zhihu-liukanshan"/>
       </div>
-      <div class="zhihu-liukanshan"/>
-    </div>
-    <el-scrollbar :height="widgetParams.heightPx - 64" :wrap-style="{backgroundColor:'white',borderRadius:'12px'}">
-      <div class="zhihu-content" >
-        <div class="zhihu-content-item"  v-for="(item, index) in viewList" :key="index">
-          <div class="zhihu-desc" @click="openLink(item.url)">
-            <div class="zhihu-serial-num" :level="index + 1">{{ index + 1 }}</div>
-            <div class="zhihu-title">{{ item.title }}</div>
-          </div>
+    </template>
+    <template #body>
+      <HotspotItem
+          v-for="(item, index) in viewList"
+          @click="openLink(item.url)"
+          :key="index"
+          :title="item.title"
+          :position="index + 1"
+      >
+        <template #append>
           <div class="zhihu-hot" v-if="item.hot" @click="openLink(item.url)">
             <span class="mgc_fire_fill"/>
             <span class="zhihu-hot-count">{{ item.hot.replaceAll(" ", '') }}</span>
           </div>
-        </div>
-      </div>
-    </el-scrollbar>
-
-  </div>
+        </template>
+      </HotspotItem>
+    </template>
+  </HotspotBox>
 </template>
 
 <script lang="ts" setup>
@@ -35,6 +38,8 @@ import {ElScrollbar} from "element-plus";
 import {slice} from "lodash";
 import {BrowserWindowApi, WidgetParams} from "@widget-js/core";
 import dayjs from "dayjs";
+import HotspotItem from "@/widgets/components/HotspotItem.vue";
+import HotspotBox from "@/widgets/components/HotspotBox.vue";
 
 type NavType = 'hot' | 'news';
 const widgetParams = WidgetParams.fromCurrentLocation();
@@ -128,7 +133,6 @@ const newsService = axios.create({
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-bottom: 14px;
 
     .zhihu-logo {
       width: 35px;
@@ -170,7 +174,7 @@ const newsService = axios.create({
 
     .zhihu-liukanshan {
       position: absolute;
-      bottom: -2px;
+      bottom: -12px;
       right: 20px;
       width: 36px;
       height: 36px;
@@ -179,80 +183,15 @@ const newsService = axios.create({
     }
   }
 
-  .el-scrollbar__wrap .el-scrollbar__wrap--hidden-default {
-    background-color: #fff;
-    border-radius: 16px;
-  }
 
-  // 内容
-  .zhihu-content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    cursor: pointer;
-    padding: 8px;
+  .zhihu-hot {
+    &-count {
+      display: inline-block;
+    }
 
-    .zhihu-content-item {
-      display: flex;
-      font-size: 14px;
-      height: 18px;
-      line-height: 18px;
-      margin-bottom: 16px;
-      width: 100%;
-      justify-content: space-between;
-
-      .zhihu-desc {
-        display: flex;
-        flex: 1;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-
-        .zhihu-serial-num {
-          background-color: #D2D2D2FF;
-          border-radius: 6px;
-          width: 18px;
-          height: inherit;
-          text-align: center;
-          line-height: inherit;
-
-          &[level='1'] {
-            background-color: #FFE082FF;
-          }
-
-          &[level='2'] {
-            background-color: #C5CAE9FF;
-          }
-
-          &[level='3'] {
-            background-color: #CEB1A1FF;
-          }
-        }
-
-        .zhihu-title {
-          font-weight: 500;
-          margin-left: 8px;
-          height: inherit;
-          line-height: inherit;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          cursor: pointer;
-          text-align: left;
-          flex: 1;
-        }
-      }
-
-      .zhihu-hot {
-        &-count {
-          display: inline-block;
-        }
-
-        .mgc_fire_fill {
-          &::before {
-            color: #ff6252;
-          }
-        }
+    .mgc_fire_fill {
+      &::before {
+        color: #ff6252;
       }
     }
   }
