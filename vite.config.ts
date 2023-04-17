@@ -9,7 +9,7 @@ import legacy from '@vitejs/plugin-legacy'
 // https://vitejs.dev/config/
 
 export default defineConfig({
-    base: './hotspot/',
+    base: '/hotspot/',
     build: {
         target: "es6",
         rollupOptions: {
