@@ -6,7 +6,8 @@
         <div class="zhihu-top-nav">
         <span class="hot_text zhihu-nav-item" :class="{active: activeNav == 'hot'}"
               @click="handleChangeNav('hot')">热榜</span>
-          <span class="news_text zhihu-nav-item" :class="{active: activeNav == 'news'}" @click="handleChangeNav('news')">日报</span>
+          <span class="news_text zhihu-nav-item" :class="{active: activeNav == 'news'}"
+                @click="handleChangeNav('news')">日报</span>
         </div>
         <div class="zhihu-liukanshan"/>
       </div>
@@ -40,6 +41,7 @@ import {BrowserWindowApi, WidgetParams} from "@widget-js/core";
 import dayjs from "dayjs";
 import HotspotItem from "@/widgets/components/HotspotItem.vue";
 import HotspotBox from "@/widgets/components/HotspotBox.vue";
+import {useIntervalFn} from "@vueuse/core";
 
 type NavType = 'hot' | 'news';
 const widgetParams = WidgetParams.fromCurrentLocation();
@@ -112,6 +114,14 @@ const newsService = axios.create({
   withCredentials: true,
   timeout: 50000,
 });
+
+
+useIntervalFn(() => {
+  getHotList()
+  getNews()
+  console.log('refresh')
+}, 20 * 60 * 1000)
+
 </script>
 
 <style scoped lang="scss">
