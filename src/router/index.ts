@@ -8,6 +8,11 @@ import WidgetRouter from "@/widgets/widget-router";
  */
 const routes: Array<RouteRecordRaw> = [
     ...WidgetRouter,
+    {
+        path: '/',
+        name: 'Index',
+        component: () => import(/* webpackChunkName: "index" */ '../Index.vue')
+    }
 ]
 
 const router = createRouter({

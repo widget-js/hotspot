@@ -23,6 +23,10 @@ button:active {
     opacity: 0.6;
 }
 
+.flex {
+    display: flex;
+}
+
 .flex-col {
     display: flex;
     flex-direction: column;
@@ -76,4 +80,13 @@ button:active {
 .align-end {
     display: flex;
     align-items: flex-end;
+}
+
+
+.gap-1{
+    gap: 1rem;
+}
+
+.gap-2{
+    gap: 2rem;
 }

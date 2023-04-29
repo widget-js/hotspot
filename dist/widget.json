@@ -1,21 +1,5 @@
 {
-  "name": "cn.widgetjs.widgets.hotspot",
-  "author": "Neo Fu",
-  "homepage": "https://widgetjs.cn",
-  "remoteEntry": "https://rtugeek.gitee.io/hotspot",
-  "remotePackage": "https://rtugeek.gitee.io/hotspot/widget.json",
-  "description": {
-    "zh": "全网热点组件"
-  },
-  "entry": "index.html",
-  "version": "1.0.0",
   "hash": true,
-  "devOptions": {
-    "folder": "./src/widgets/",
-    "storybook": false,
-    "route": true,
-    "devUrl": "http://localhost:5173"
-  },
   "widgets": [
     {
       "lang": "zh",
@@ -145,5 +129,24 @@
         }
       ]
     }
-  ]
+  ],
+  "name": "cn.widgetjs.widgets.hotspot",
+  "version": "1.0.0",
+  "author": "Neo Fu",
+  "homepage": "https://widgetjs.cn",
+  "title": {
+    "zh-CN": "包含知乎、bilibili、抖音、微博等平台的热搜组件。"
+  },
+  "description": {
+    "zh-CN": "全网热点组件"
+  },
+  "entry": "index.html",
+  "remoteEntry": "https://rtugeek.gitee.io/hotspot",
+  "remotePackage": "https://rtugeek.gitee.io/hotspot/widget.json",
+  "url": "",
+  "devOptions": {
+    "folder": "./src/widgets/",
+    "route": true,
+    "devUrl": "http://localhost:5173"
+  }
 }

@@ -5,7 +5,7 @@
   "remoteEntry": "https://rtugeek.gitee.io/hotspot",
   "remotePackage": "https://rtugeek.gitee.io/hotspot/widget.json",
   "description": {
-    "zh": "全网热点组件"
+    "zh": "这是桌面组件热搜组件包源码，包含知乎、bilibili、抖音、微博等平台的热搜组件。"
   },
   "entry": "index.html",
   "version": "1.0.0",
