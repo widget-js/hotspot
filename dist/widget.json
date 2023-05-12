@@ -135,7 +135,7 @@
   "author": "Neo Fu",
   "homepage": "https://widgetjs.cn",
   "title": {
-    "zh-CN": "包含知乎、bilibili、抖音、微博等平台的热搜组件。"
+    "zh-CN": "包含知乎、B站、抖音、微博等平台的热搜组件。"
   },
   "description": {
     "zh-CN": "全网热点组件"
@@ -147,6 +147,6 @@
   "devOptions": {
     "folder": "./src/widgets/",
     "route": true,
-    "devUrl": "http://localhost:5173"
+    "devUrl": "http://localhost:5173/hotspot"
   }
 }

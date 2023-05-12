@@ -8,12 +8,11 @@ export default new WidgetPackage({
     entry: "index.html",
     hash: true,
     homepage: "https://widgetjs.cn",
-    lang: undefined,
     name: "cn.widgetjs.widgets.hotspot",
     remoteEntry: "https://rtugeek.gitee.io/hotspot",
     remotePackage: "https://rtugeek.gitee.io/hotspot/widget.json",
     title: {
-        "zh-CN": "包含知乎、bilibili、抖音、微博等平台的热搜组件。",
+        "zh-CN": "包含知乎、B站、抖音、微博等平台的热搜组件。",
     },
     url: "",
     version: "1.0.0",
