@@ -44,6 +44,7 @@
     "@vue/cli-service": "~5.0.0",
     "@vue/compiler-sfc": "^3.2.45",
     "@vue/eslint-config-typescript": "^9.1.0",
+    "@vueuse/shared": "^10.1.2",
     "@widget-js/cli": "^1.1.0",
     "@widget-js/vite-plugin-widget": "^1.0.4",
     "css-loader": "^6.7.2",
