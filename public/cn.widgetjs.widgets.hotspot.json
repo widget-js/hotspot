@@ -98,13 +98,13 @@
       ]
     },
     {
-      "lang": "zh",
+      "lang": "zh-CN",
       "name": "cn.widgetjs.widgets.hotspot.zhihu",
       "title": {
-        "zh": "知乎"
+        "zh-CN": "知乎"
       },
       "description": {
-        "zh": "知乎热榜与日报"
+        "zh-CN": "知乎热榜与日报"
       },
       "keywords": [
         "recommend"
@@ -141,8 +141,8 @@
     "zh-CN": "包含知乎、B站、抖音、微博等平台的热搜组件。"
   },
   "entry": "index.html",
-  "remoteEntry": "https://rtugeek.gitee.io/hotspot",
-  "remotePackage": "https://rtugeek.gitee.io/hotspot/widget.json",
+  "remoteEntry": "http://127.0.0.1:8080/hotspot",
+  "remotePackage": "http://localhost:5173/hotspot/widget.json",
   "url": "",
   "devOptions": {
     "folder": "./src/widgets/",
