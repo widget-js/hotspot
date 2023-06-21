@@ -65,15 +65,12 @@ const service = axios.create({
 
 <style scoped lang="scss">
 .bilibili-box {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   font-family: OPPOSans-Bold, 'Microsoft Yahei', serif;
   background: linear-gradient(#27b8f1, #00aeec);
   border-radius: 22px;
-  padding: 16px;
 
   // 顶部
   .bilibili-header {

@@ -1,5 +1,5 @@
 <template>
-  <HotspotBox class="zhihu-box" :height="widgetParams.heightPx">
+  <HotspotBox class="zhihu-box" >
     <template #header>
       <div class="zhihu-header">
         <div class="zhihu-logo"/>
@@ -14,11 +14,11 @@
     </template>
     <template #body>
       <HotspotItem
-          v-for="(item, index) in viewList"
-          @click="openLink(item.url)"
-          :key="index"
-          :title="item.title"
-          :position="index + 1"
+        v-for="(item, index) in viewList"
+        @click="openLink(item.url)"
+        :key="index"
+        :title="item.title"
+        :position="index + 1"
       >
         <template #append>
           <div class="zhihu-hot" v-if="item.hot" @click="openLink(item.url)">
@@ -35,7 +35,6 @@
 import axios from "axios";
 import {nextTick, onMounted, Ref, ref} from "vue";
 import {ZhihuConvert, ZhihuModel} from "./model/ZhihuModel";
-import {ElScrollbar} from "element-plus";
 import {slice} from "lodash";
 import {BrowserWindowApi, WidgetParams} from "@widget-js/core";
 import dayjs from "dayjs";
@@ -44,7 +43,6 @@ import HotspotBox from "@/widgets/components/HotspotBox.vue";
 import {useIntervalFn} from "@vueuse/core";
 
 type NavType = 'hot' | 'news';
-const widgetParams = WidgetParams.fromCurrentLocation();
 
 const props = defineProps({
   backgroundColor: {
@@ -126,15 +124,12 @@ useIntervalFn(() => {
 
 <style scoped lang="scss">
 .zhihu-box {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   font-family: OPPOSans-Bold, "Microsoft Yahei", serif;
   background-image: linear-gradient(46deg, rgba(5, 109, 232, 1) 0, rgba(0, 168, 255, 1) 100%);
   border-radius: 22px;
-  padding: 16px;
 
   // 顶部
   .zhihu-header {

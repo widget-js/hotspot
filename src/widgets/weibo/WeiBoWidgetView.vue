@@ -1,9 +1,12 @@
 <template>
-  <wei-bo-widget></wei-bo-widget>
+  <widget-wrapper shadow-color="#a8a8a8">
+    <wei-bo-widget/>
+  </widget-wrapper>
 </template>
 
 <script lang="ts" setup>
-import WeiBoWidget from "./WeiBoWidget.vue"
+import WeiBoWidget from "@/widgets/weibo/WeiBoWidget.vue";
+import {WidgetWrapper} from "@widget-js/vue3";
 </script>
 
 <style scoped>

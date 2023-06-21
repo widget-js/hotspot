@@ -3,8 +3,9 @@
     <div class="hotspot-header">
       <slot name="header"></slot>
     </div>
+    <!--  60是标题高度，24是组件上下空白的间距  -->
     <el-scrollbar
-      :height="height - 64"
+      :height="height - 60 - 24"
       :wrap-style="{ backgroundColor: bodyColor, borderRadius: '12px' }"
     >
       <div class="hotspot-content">
@@ -15,18 +16,17 @@
 </template>
 
 <script lang="ts" setup>
-import { ElScrollbar } from 'element-plus'
+import {ElScrollbar} from 'element-plus'
+import {useWindowSize} from "@vueuse/core";
 
 const props = defineProps({
   bodyColor: {
     type: String,
     default: '#fff'
-  },
-  height: {
-    type: Number,
-    required: true
   }
 })
+
+const {height} = useWindowSize();
 </script>
 
 <style scoped lang="scss">
@@ -39,7 +39,8 @@ const props = defineProps({
   overflow: hidden;
   font-family: OPPOSans-Bold, 'Microsoft Yahei', serif;
   border-radius: 22px;
-  padding: 16px 16px 16px 16px ;
+  padding: 16px 16px 16px 16px;
+
   .hotspot-header {
     position: relative;
     width: 100%;

@@ -2,13 +2,13 @@
   "hash": true,
   "widgets": [
     {
-      "lang": "zh",
+      "lang": "zh-CN",
       "name": "cn.widgetjs.widgets.hotspot.bilibili",
       "title": {
-        "zh": "bilibili热搜"
+        "zh-CN": "bilibili热搜"
       },
       "description": {
-        "zh": "看看年轻人在B站搜什么"
+        "zh-CN": "看看年轻人在B站搜什么"
       },
       "keywords": [
         "recommend"
@@ -34,13 +34,13 @@
       ]
     },
     {
-      "lang": "zh",
+      "lang": "zh-CN",
       "name": "cn.widgetjs.widgets.hotspot.douyin",
       "title": {
-        "zh": "抖音热榜"
+        "zh-CN": "抖音热榜"
       },
       "description": {
-        "zh": "抖音热榜"
+        "zh-CN": "抖音热榜"
       },
       "keywords": [
         "recommend"
@@ -66,13 +66,13 @@
       ]
     },
     {
-      "lang": "zh",
+      "lang": "zh-CN",
       "name": "ccn.widgetjs.widgets.hotspot.weibo",
       "title": {
-        "zh": "微博热搜"
+        "zh-CN": "微博热搜"
       },
       "description": {
-        "zh": "微博热搜"
+        "zh-CN": "微博热搜"
       },
       "keywords": [
         "recommend"

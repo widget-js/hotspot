@@ -1,5 +1,5 @@
 <template>
-  <hotspot-box class="hotspot-box" :height="widgetParams.heightPx">
+  <hotspot-box class="hotspot-box">
     <template #header>
       <div style="color: white" class="header">
         <svg
@@ -62,7 +62,6 @@ import { BrowserWindowApi, WidgetParams } from '@widget-js/core'
 import HotspotBox from '@/widgets/components/HotspotBox.vue'
 import HotspotItem from '@/widgets/components/HotspotItem.vue'
 
-const widgetParams = WidgetParams.fromCurrentLocation()
 
 const viewList: Ref<DouyinModel[]> = ref([])
 

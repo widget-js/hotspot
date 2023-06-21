@@ -1,5 +1,5 @@
 <template>
-  <HotspotBox class="weibo-box" :height="widgetParams.heightPx">
+  <HotspotBox class="weibo-box">
     <template #header>
       <div class="weibo_header">
         <img src="./images/weibo.svg" style="margin-right: 8px" height="18" alt="">
@@ -28,12 +28,9 @@ import axios from "axios";
 import {useIntervalFn} from "@vueuse/core";
 import {nextTick, onMounted, Ref, ref} from "vue";
 import {WeiBoModel} from "./model/WeiBoModel";
-import {ElScrollbar} from "element-plus";
 import {BrowserWindowApi, WidgetParams} from "@widget-js/core";
 import HotspotBox from "@/widgets/components/HotspotBox.vue";
 import HotspotItem from "@/widgets/components/HotspotItem.vue";
-
-const widgetParams = WidgetParams.fromCurrentLocation();
 
 const viewList: Ref<WeiBoModel[]> = ref([]);
 

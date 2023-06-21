@@ -7,19 +7,28 @@ import path from 'path'
 import ViteWidget from '@widget-js/vite-plugin-widget'
 // https://vitejs.dev/config/
 
-export default defineConfig({
-  base: '/hotspot/',
-  build: {
-    target: "es6",
-  },
-  plugins: [vue(), ViteWidget({fullNameFile: true}),
-    AutoImport({
-      resolvers: [ElementPlusResolver()],
-    }),
-    Components({
-      resolvers: [ElementPlusResolver()],
-    })],
-  resolve: {
-    alias: [{find: '@', replacement: path.resolve(__dirname, 'src')}]
+export default defineConfig(({command, mode}) => (
+  {
+    base: mode == 'local' ? './' : '/hotspot/',
+    build: {
+      target: "es6",
+      rollupOptions: {
+        output: {
+          entryFileNames: `assets/[name].js`,
+          chunkFileNames: `assets/[name].js`,
+          assetFileNames: `assets/[name].[ext]`
+        }
+      }
+    },
+    plugins: [vue(), ViteWidget({fullNameFile: true}),
+      AutoImport({
+        resolvers: [ElementPlusResolver()],
+      }),
+      Components({
+        resolvers: [ElementPlusResolver()],
+      })],
+    resolve: {
+      alias: [{find: '@', replacement: path.resolve(__dirname, 'src')}]
+    }
   }
-})
+))
