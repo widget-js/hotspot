@@ -2,20 +2,20 @@
   <HotspotBox class="bilibili-box" :height="widgetParams.heightPx">
     <template #header>
       <div class="bilibili-header">
-        <img src="./images/bilibili_tv.png" style="margin-right: 8px" height="18" alt="" />
+        <img src="./images/bilibili_tv.png" style="margin-right: 8px" height="18" alt=""/>
         <div class="bilibili-title">bilibili热搜</div>
       </div>
     </template>
     <template #body>
       <HotspotItem
         v-for="(item, index) in viewList"
-        @click="openLink(item.keyword)"
+        :url="`https://search.bilibili.com/all?keyword=${item.keyword}`"
         :key="index"
         :title="item.show_name"
         :position="index + 1"
       >
         <template #append>
-          <img v-if="item.icon" :src="item.icon" style="height: 18px" alt="" />
+          <img v-if="item.icon" :src="item.icon" style="height: 18px" alt=""/>
         </template>
       </HotspotItem>
     </template>
@@ -24,10 +24,10 @@
 
 <script lang="ts" setup>
 import axios from 'axios'
-import { useIntervalFn } from '@vueuse/core'
-import { nextTick, onMounted, Ref, ref } from 'vue'
-import { BilibiliModel } from './model/BilibiliModel'
-import { BrowserWindowApi, WidgetParams } from '@widget-js/core'
+import {useIntervalFn} from '@vueuse/core'
+import {nextTick, onMounted, Ref, ref} from 'vue'
+import {BilibiliModel} from './model/BilibiliModel'
+import {WidgetParams} from '@widget-js/core'
 import HotspotBox from '@/widgets/components/HotspotBox.vue'
 import HotspotItem from '@/widgets/components/HotspotItem.vue'
 
@@ -44,10 +44,6 @@ useIntervalFn(() => {
   getHotList()
   console.log('refresh')
 }, 20 * 60 * 1000)
-
-function openLink(keyword: string) {
-  BrowserWindowApi.openUrl(`https://search.bilibili.com/all?keyword=${keyword}`)
-}
 
 // 知乎热榜
 async function getHotList() {
@@ -82,6 +78,7 @@ const service = axios.create({
     color: #fff;
     font-size: 14px;
     font-weight: bold;
+
     .logo {
       position: absolute;
       right: 8px;

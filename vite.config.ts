@@ -4,12 +4,12 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import {ElementPlusResolver} from 'unplugin-vue-components/resolvers'
 import path from 'path'
-import ViteWidget from '@widget-js/vite-plugin-widget'
+import widget from '@widget-js/vite-plugin-widget'
 // https://vitejs.dev/config/
 
 export default defineConfig(({command, mode}) => (
   {
-    base: mode == 'local' ? './' : '/hotspot/',
+    base: mode == 'offline' ? './' : '/hotspot/',
     build: {
       target: "es6",
       rollupOptions: {
@@ -20,7 +20,7 @@ export default defineConfig(({command, mode}) => (
         }
       }
     },
-    plugins: [vue(), ViteWidget({fullNameFile: true}),
+    plugins: [vue(), widget({generateFullNamePackage: true}),
       AutoImport({
         resolvers: [ElementPlusResolver()],
       }),

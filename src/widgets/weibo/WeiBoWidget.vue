@@ -9,8 +9,8 @@
     <template #body>
       <HotspotItem
           v-for="(item, index) in viewList"
-          @click="openLink(item.word)"
           :key="index"
+          :url="`https://s.weibo.com/weibo?q=${item.word}`"
           :title="item.word"
           :position="index + 1"
       >
@@ -43,10 +43,6 @@ useIntervalFn(() => {
   getHotList();
   console.log("refresh")
 }, 20 * 60 * 1000)
-
-function openLink(keyword: string) {
-  BrowserWindowApi.openUrl(`https://s.weibo.com/weibo?q=${keyword}`)
-}
 
 function getLabel(item: WeiBoModel): string {
   if (item.icon_desc) {

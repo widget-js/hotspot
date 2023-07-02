@@ -14,7 +14,7 @@
           </div>
 
           <bubbly-button style="margin-left: auto" label="在客户端打开" @click="openInApp" class="bubbly-button">
-            <template slot="icon">
+             <template slot="icon">
               <div>
                 <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M6 24.0083V42H42V24" stroke="#333" stroke-width="4" stroke-linecap="round"
@@ -28,7 +28,6 @@
             </template>
           </bubbly-button>
           <bubbly-button @click="downloadApp" class="bubbly-button" label="下载客户端">
-
           </bubbly-button>
         </div>
         <div class="marquee">

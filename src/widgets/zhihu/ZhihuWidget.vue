@@ -1,5 +1,5 @@
 <template>
-  <HotspotBox class="zhihu-box" >
+  <HotspotBox class="zhihu-box">
     <template #header>
       <div class="zhihu-header">
         <div class="zhihu-logo"/>
@@ -15,13 +15,13 @@
     <template #body>
       <HotspotItem
         v-for="(item, index) in viewList"
-        @click="openLink(item.url)"
+        :url='getUrl(item.url)'
         :key="index"
         :title="item.title"
         :position="index + 1"
       >
         <template #append>
-          <div class="zhihu-hot" v-if="item.hot" @click="openLink(item.url)">
+          <div class="zhihu-hot" v-if="item.hot" @click="getUrl(item.url)">
             <span class="mgc_fire_fill"/>
             <span class="zhihu-hot-count">{{ item.hot.replaceAll(" ", '') }}</span>
           </div>
@@ -65,8 +65,8 @@ onMounted(async () => {
   handleChangeNav(activeNav.value);
 });
 
-function openLink(url: string) {
-  BrowserWindowApi.openUrl(url.replaceAll("api.", "").replaceAll("questions", "question"))
+function getUrl(url: string) {
+  return url.replaceAll("api.", "").replaceAll("questions", "question")
 }
 
 // 知乎热榜

@@ -33,13 +33,14 @@
             p-id="2107"
           ></path>
         </svg>
-        抖音热榜</div
+        抖音热榜
+      </div
       >
     </template>
     <template #body>
       <hotspot-item
         v-for="(item, index) in viewList"
-        @click="openLink(item.word)"
+        :url="`https://www.douyin.com/search/${item.word}`"
         :title="item.word"
         :position="item.position"
       >
@@ -55,10 +56,10 @@
 
 <script lang="ts" setup>
 import axios from 'axios'
-import { useIntervalFn } from '@vueuse/core'
-import { nextTick, onMounted, Ref, ref } from 'vue'
-import { DouyinLabels, DouyinModel, Label } from './model/DouyinModel'
-import { BrowserWindowApi, WidgetParams } from '@widget-js/core'
+import {useIntervalFn} from '@vueuse/core'
+import {nextTick, onMounted, Ref, ref} from 'vue'
+import {DouyinLabels, DouyinModel, Label} from './model/DouyinModel'
+import {BrowserWindowApi} from '@widget-js/core'
 import HotspotBox from '@/widgets/components/HotspotBox.vue'
 import HotspotItem from '@/widgets/components/HotspotItem.vue'
 
@@ -85,9 +86,6 @@ useIntervalFn(() => {
   console.log('refresh')
 }, 20 * 60 * 1000)
 
-function openLink(keyword: string) {
-  BrowserWindowApi.openUrl(`https://www.douyin.com/search/${keyword}`)
-}
 
 // 知乎热榜
 async function getHotList() {
@@ -106,9 +104,11 @@ const service = axios.create({
 <style scoped lang="scss">
 .hotspot-box {
   background-image: linear-gradient(135deg, #3e4061 0%, #1d1e2d 100%);
+
   .header {
     display: flex;
     align-content: center;
+
     .logo {
       width: 18px;
       height: 18px;
@@ -117,6 +117,7 @@ const service = axios.create({
     }
   }
 }
+
 .label {
   border-radius: 4px;
   color: white;
@@ -124,15 +125,19 @@ const service = axios.create({
   padding: 0 2px;
   max-height: 18px;
   font-size: 12px;
+
   &[data='3'] {
     background-image: linear-gradient(135deg, #ff7395 0%, #ff1f52 100%);
   }
+
   &[data='5'] {
     background-image: linear-gradient(135deg, #ff78df 0%, #fd39d0 100%);
   }
+
   &[data='8'] {
     background-image: linear-gradient(135deg, #ff7dd6 0%, #fc2eba 100%);
   }
+
   &[data='1'] {
     background-image: linear-gradient(135deg, #f19fff 0%, #c757d8 100%);
   }
