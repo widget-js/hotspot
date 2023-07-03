@@ -32,10 +32,10 @@
         </div>
         <div class="marquee">
           <div class="marquee__group">
-            <img v-for="item in widgetPackage.widgets" :src="item.previewImage"/>
+            <img v-for="item in widgetPackage.widgets" :src="`./${item.previewImage}`"/>
           </div>
           <div class="marquee__group">
-            <img v-for="item in widgetPackage.widgets" :src="item.previewImage"/>
+            <img v-for="item in widgetPackage.widgets" :src="`./${item.previewImage}`"/>
           </div>
         </div>
       </template>
@@ -56,11 +56,11 @@ import axios, {AxiosError} from "axios";
 import {WidgetPackage} from "@widget-js/core";
 import {computed, onMounted, ref} from "vue";
 import BubblyButton from "@/BubblyButton.vue";
-
+console.log( window.location.origin)
 const widgetPackage = ref<WidgetPackage>()
 const error = ref<AxiosError>()
 
-axios.get('/widget.json').then((result) => {
+axios.get('./widget.json').then((result) => {
   widgetPackage.value = WidgetPackage.parseObject(result.data)
 }).catch((reason) => {
   error.value = reason
