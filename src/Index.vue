@@ -14,28 +14,16 @@
           </div>
 
           <bubbly-button style="margin-left: auto" label="在客户端打开" @click="openInApp" class="bubbly-button">
-             <template slot="icon">
-              <div>
-                <svg width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 24.0083V42H42V24" stroke="#333" stroke-width="4" stroke-linecap="round"
-                        stroke-linejoin="round"/>
-                  <path d="M33 23L24 32L15 23" stroke="#333" stroke-width="4" stroke-linecap="round"
-                        stroke-linejoin="round"/>
-                  <path d="M23.9917 6V32" stroke="#333" stroke-width="4" stroke-linecap="round"
-                        stroke-linejoin="round"/>
-                </svg>
-              </div>
-            </template>
           </bubbly-button>
           <bubbly-button @click="downloadApp" class="bubbly-button" label="下载客户端">
           </bubbly-button>
         </div>
         <div class="marquee">
           <div class="marquee__group">
-            <img v-for="item in widgetPackage.widgets" :src="`./${item.previewImage}`"/>
+            <img v-for="item in widgetPackage.widgets" :src="getImageUrl(item.previewImage!)"/>
           </div>
           <div class="marquee__group">
-            <img v-for="item in widgetPackage.widgets" :src="`./${item.previewImage}`"/>
+            <img v-for="item in widgetPackage.widgets" :src="getImageUrl(item.previewImage!)"/>
           </div>
         </div>
       </template>
@@ -56,6 +44,7 @@ import axios, {AxiosError} from "axios";
 import {WidgetPackage} from "@widget-js/core";
 import {computed, onMounted, ref} from "vue";
 import BubblyButton from "@/BubblyButton.vue";
+
 const widgetPackage = ref<WidgetPackage>()
 const error = ref<AxiosError>()
 
@@ -70,12 +59,16 @@ const openInAppUrl = computed(() => {
   return `widget://widgetjs.cn/package?url=${remotePackageURL}`;
 })
 
-const downloadApp = ()=>{
+const downloadApp = () => {
   window.open('https://haihaihai.vip/')
 }
 
 const openInApp = () => {
   window.location.href = openInAppUrl.value;
+}
+
+const getImageUrl = (url: string) => {
+  return `${import.meta.env.BASE_URL}${url}`.replaceAll('//', '/')
 }
 </script>
 
