@@ -9,9 +9,8 @@ import widget from '@widget-js/vite-plugin-widget'
 
 export default defineConfig(({command, mode}) => (
   {
-    base: mode == 'offline' ? './' : '/hotspot/',
+    base: mode == 'offline' ? '/' : '/hotspot/',
     build: {
-      target: "es6",
       rollupOptions: {
         output: {
           entryFileNames: `assets/[name].js`,

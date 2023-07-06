@@ -39,7 +39,7 @@
           </div>
         </div>
       </template>
-      <template v-else>
+      <template v-else-if="error">
         <div class="error">
           <p>加载失败</p>
           <p>{{ error.message }}</p>
@@ -56,11 +56,10 @@ import axios, {AxiosError} from "axios";
 import {WidgetPackage} from "@widget-js/core";
 import {computed, onMounted, ref} from "vue";
 import BubblyButton from "@/BubblyButton.vue";
-console.log( window.location.origin)
 const widgetPackage = ref<WidgetPackage>()
 const error = ref<AxiosError>()
 
-axios.get('./widget.json').then((result) => {
+axios.get(`${import.meta.env.BASE_URL}/widget.json`).then((result) => {
   widgetPackage.value = WidgetPackage.parseObject(result.data)
 }).catch((reason) => {
   error.value = reason
