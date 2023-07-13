@@ -9,7 +9,7 @@ import widget from '@widget-js/vite-plugin-widget'
 
 export default defineConfig(({command, mode}) => (
   {
-    base: mode == 'offline' ? '/' : '/hotspot/',
+    base: mode == 'offline' ? '' : '/hotspot/',
     build: {
       rollupOptions: {
         output: {
