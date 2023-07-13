@@ -99,38 +99,6 @@
     },
     {
       "lang": "zh-CN",
-      "name": "cn.widgetjs.widgets.hotspot.bangumi",
-      "title": {
-        "zh-CN": "B站新番时间表"
-      },
-      "description": {
-        "zh-CN": "追番小助手"
-      },
-      "keywords": [
-        "recommend"
-      ],
-      "width": 4,
-      "height": 4,
-      "movable": true,
-      "permissions": [],
-      "maxWidth": 4,
-      "maxHeight": 4,
-      "minWidth": 4,
-      "minHeight": 4,
-      "backgroundThrottling": true,
-      "previewImage": "/images/preview_bangumi.png",
-      "refreshWhenResided": false,
-      "hideWhenBlur": false,
-      "supportHostedMode": 17,
-      "routes": [
-        {
-          "url": "/widget/bangumi",
-          "name": "index"
-        }
-      ]
-    },
-    {
-      "lang": "zh-CN",
       "name": "cn.widgetjs.widgets.hotspot.bilibili",
       "title": {
         "zh-CN": "bilibili热搜"
@@ -160,10 +128,42 @@
           "name": "index"
         }
       ]
+    },
+    {
+      "lang": "zh-CN",
+      "name": "cn.widgetjs.widgets.hotspot.bangumi",
+      "title": {
+        "zh-CN": "B站新番时间表"
+      },
+      "description": {
+        "zh-CN": "追番小助手"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "width": 4,
+      "height": 4,
+      "movable": true,
+      "permissions": [],
+      "maxWidth": 4,
+      "maxHeight": 4,
+      "minWidth": 4,
+      "minHeight": 4,
+      "backgroundThrottling": true,
+      "previewImage": "/images/preview_bangumi.png",
+      "refreshWhenResided": false,
+      "hideWhenBlur": false,
+      "supportHostedMode": 17,
+      "routes": [
+        {
+          "url": "/widget/bangumi",
+          "name": "index"
+        }
+      ]
     }
   ],
   "name": "cn.widgetjs.widgets.hotspot",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Neo Fu",
   "homepage": "https://widgetjs.cn",
   "title": {
