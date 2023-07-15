@@ -60,7 +60,7 @@ const openInAppUrl = computed(() => {
 })
 
 const downloadApp = () => {
-  window.open('https://haihaihai.vip/')
+  window.open('https://widgetjs.cn/')
 }
 
 const openInApp = () => {

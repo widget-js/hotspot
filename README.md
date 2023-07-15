@@ -21,7 +21,7 @@
 
 - https://www.microsoft.com/store/productId/9NPR50GQ7T53
 - 或
-- https://haihaihai.vip
+- https://widgetjs.cn
 
 ### 项目目录结构
 
@@ -46,7 +46,7 @@ widgets
 #### 1.下载并运行桌面组件客户端
 - https://www.microsoft.com/store/productId/9NPR50GQ7T53
 - 或
-- https://haihaihai.vip
+- https://widgetjs.cn
 
 #### 2.克隆代码
 
