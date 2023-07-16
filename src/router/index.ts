@@ -1,5 +1,5 @@
-import {createRouter, createWebHashHistory, RouteRecordRaw} from 'vue-router'
-import WidgetRouter from "@/widgets/widget-router";
+import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
+import WidgetRouter from '@/widgets/widget-router';
 
 /**
  * 组件路由都以 /widget/开头，e.g. /widget/countdown
@@ -7,16 +7,16 @@ import WidgetRouter from "@/widgets/widget-router";
  * webpackChunkName: 和路由名称保持一致
  */
 const routes: Array<RouteRecordRaw> = [
-    ...WidgetRouter,
-    {
-        path: '/',
-        name: 'Index',
-        component: () => import(/* webpackChunkName: "index" */ '../Index.vue')
-    }
-]
+  ...WidgetRouter,
+  {
+    path: '/',
+    name: 'Index',
+    component: () => import(/* webpackChunkName: "index" */ '../LandingPage.vue'),
+  },
+];
 
 const router = createRouter({
-    history: createWebHashHistory(),
-    routes
-})
-export default router
+  history: createWebHashHistory(),
+  routes,
+});
+export default router;

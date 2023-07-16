@@ -3,27 +3,28 @@
     <div class="widget-package-box">
       <template v-if="widgetPackage">
         <div class="flex desc">
-          <img alt="logo" class="logo" src="/logo.png"/>
+          <img alt="logo" class="logo" src="/logo.png" />
           <div class="package-info flex-col">
-            <div class="title"> {{ widgetPackage!.getTitle() }}</div>
-            <div> {{ widgetPackage!.getDescription() }}</div>
+            <div class="title">{{ widgetPackage!.getTitle() }}</div>
+            <div>{{ widgetPackage!.getDescription() }}</div>
             <div></div>
             <div class="widget-tag-group">
-              <div class="widget-tag" v-for="widget in widgetPackage!.widgets">{{ widget.getTitle() }}</div>
+              <div class="widget-tag" v-for="widget in widgetPackage!.widgets" :key="widget.name">
+                {{ widget.getTitle() }}
+              </div>
             </div>
           </div>
 
           <bubbly-button style="margin-left: auto" label="在客户端打开" @click="openInApp" class="bubbly-button">
           </bubbly-button>
-          <bubbly-button @click="downloadApp" class="bubbly-button" label="下载客户端">
-          </bubbly-button>
+          <bubbly-button @click="downloadApp" class="bubbly-button" label="下载客户端"></bubbly-button>
         </div>
         <div class="marquee">
           <div class="marquee__group">
-            <img v-for="item in widgetPackage.widgets" :src="getImageUrl(item.previewImage!)"/>
+            <img v-for="item in widgetPackage.widgets" :key="item.name" :src="getImageUrl(item.previewImage!)" />
           </div>
           <div class="marquee__group">
-            <img v-for="item in widgetPackage.widgets" :src="getImageUrl(item.previewImage!)"/>
+            <img v-for="item in widgetPackage.widgets" :key="item.name" :src="getImageUrl(item.previewImage!)" />
           </div>
         </div>
       </template>
@@ -39,41 +40,42 @@
 </template>
 
 <script lang="ts" setup>
+import axios, { AxiosError } from 'axios';
+import { WidgetPackage } from '@widget-js/core';
+import { computed, ref } from 'vue';
+import BubblyButton from '@/BubblyButton.vue';
 
-import axios, {AxiosError} from "axios";
-import {WidgetPackage} from "@widget-js/core";
-import {computed, onMounted, ref} from "vue";
-import BubblyButton from "@/BubblyButton.vue";
+const widgetPackage = ref<WidgetPackage>();
+const error = ref<AxiosError>();
 
-const widgetPackage = ref<WidgetPackage>()
-const error = ref<AxiosError>()
-
-axios.get(`${import.meta.env.BASE_URL}/widget.json`).then((result) => {
-  widgetPackage.value = WidgetPackage.parseObject(result.data)
-}).catch((reason) => {
-  error.value = reason
-})
+axios
+  .get(`${import.meta.env.BASE_URL}/widget.json`)
+  .then((result) => {
+    widgetPackage.value = WidgetPackage.parseObject(result.data);
+  })
+  .catch((reason) => {
+    error.value = reason;
+  });
 
 const openInAppUrl = computed(() => {
-  const remotePackageURL = encodeURIComponent(widgetPackage.value!.remotePackage!)
+  const remotePackageURL = encodeURIComponent(widgetPackage.value!.remotePackage!);
   return `widget://widgetjs.cn/package?url=${remotePackageURL}`;
-})
+});
 
 const downloadApp = () => {
-  window.open('https://widgetjs.cn/')
-}
+  window.open('https://widgetjs.cn/');
+};
 
 const openInApp = () => {
   window.location.href = openInAppUrl.value;
-}
+};
 
 const getImageUrl = (url: string) => {
-  return `${import.meta.env.BASE_URL}${url}`.replaceAll('//', '/')
-}
+  return `${import.meta.env.BASE_URL}${url}`.replaceAll('//', '/');
+};
 </script>
 
 <style scoped lang="scss">
-
 .widget-landing-page {
   display: flex;
   height: 100vh;
@@ -151,15 +153,12 @@ const getImageUrl = (url: string) => {
         border: 1px solid $border-color;
       }
     }
-
   }
 
   .logo {
     width: 6rem;
     height: 6rem;
   }
-
-
 }
 
 .marquee {
@@ -205,5 +204,4 @@ const getImageUrl = (url: string) => {
     transform: translateX(calc(-100% - var(--gap)));
   }
 }
-
 </style>

@@ -9,35 +9,35 @@
 </template>
 
 <script lang="ts" setup>
-import {computed} from 'vue'
-import {BrowserWindowApi} from "@widget-js/core";
+import { computed } from 'vue';
+import { BrowserWindowApi } from '@widget-js/core';
 
 const props = defineProps({
   title: {
     type: String,
-    required: true
+    required: true,
   },
   position: {
     type: Number,
-    required: true
+    required: true,
   },
   url: {
     type: String,
-    required: true
-  }
-})
+    required: true,
+  },
+});
 
 function openLink() {
-  BrowserWindowApi.openUrl(props.url, {external: true})
+  BrowserWindowApi.openUrl(props.url, { external: true });
 }
 
-const colors = ['#ffe082ff', '#c5cae9ff', '#ceb1a1ff', '#d2d2d2ff']
+const colors = ['#ffe082ff', '#c5cae9ff', '#ceb1a1ff', '#d2d2d2ff'];
 const positionBackgroundColor = computed(() => {
   if (props.position < 4) {
-    return colors[props.position - 1]
+    return colors[props.position - 1];
   }
-  return colors[3]
-})
+  return colors[3];
+});
 </script>
 
 <style scoped lang="scss">

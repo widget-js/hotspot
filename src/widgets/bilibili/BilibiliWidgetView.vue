@@ -5,10 +5,8 @@
 </template>
 
 <script lang="ts" setup>
-import BilibiliWidget from "./BilibiliWidget.vue"
-import {WidgetWrapper} from "@widget-js/vue3";
+import BilibiliWidget from './BilibiliWidget.vue';
+import { WidgetWrapper } from '@widget-js/vue3';
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

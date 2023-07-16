@@ -1,24 +1,24 @@
-import {WidgetPackage} from "@widget-js/core";
+import {WidgetPackage} from '@widget-js/core';
 
 export default new WidgetPackage({
-  author: "Neo Fu",
+  author: 'Neo Fu',
   description: {
-    "zh-CN": "包含知乎、B站、抖音、微博等平台的热搜组件。",
+    'zh-CN': '包含知乎、B站、抖音、微博等平台的热搜组件。',
   },
-  entry: "index.html",
+  entry: 'index.html',
   hash: true,
-  homepage: "https://widgetjs.cn",
-  name: "cn.widgetjs.widgets.hotspot",
-  remoteEntry: "https://rtugeek.gitee.io/hotspot",
-  remotePackage: "https://rtugeek.gitee.io/hotspot/widget.json",
+  homepage: 'https://widgetjs.cn',
+  name: 'cn.widgetjs.widgets.hotspot',
+  remoteEntry: 'https://rtugeek.gitee.io/hotspot',
+  remotePackage: 'https://rtugeek.gitee.io/hotspot/widget.json',
   title: {
-    "zh-CN": "全网热点组件",
+    'zh-CN': '全网热点组件',
   },
-  url: "",
-  version: "1.1.0",
+  url: '',
+  version: '1.1.0',
   devOptions: {
-    folder: "./src/widgets/",
+    folder: './src/widgets/',
     route: true,
-    devUrl: "http://localhost:5173/hotspot"
+    devUrl: 'http://localhost:5173/hotspot'
   }
 });

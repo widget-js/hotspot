@@ -7,10 +7,7 @@ const BangumiWidgetRoutes = [
   {
     path: url,
     name: `${name}`,
-    component: () =>
-      import(
-        /* webpackChunkName: "cn.widgetjs.widgets.hotspot.bangumi" */ './BangumiWidgetView.vue'
-      ),
+    component: () => import(/* webpackChunkName: "cn.widgetjs.widgets.hotspot.bangumi" */ './BangumiWidgetView.vue'),
   },
 ];
 

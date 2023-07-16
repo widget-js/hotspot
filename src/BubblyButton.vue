@@ -1,14 +1,13 @@
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   color: {
     type: String,
-    default: '#4d89ea'
+    default: '#4d89ea',
   },
   label: {
-    type: String
-  }
-})
-
+    type: String,
+  },
+});
 </script>
 
 <template>
@@ -27,7 +26,7 @@ const props = defineProps({
   display: flex;
   align-items: center;
   justify-items: center;
-  font-size: .8rem;
+  font-size: 0.8rem;
   padding: 12px;
   text-decoration: none;
   -webkit-appearance: none;
@@ -47,6 +46,5 @@ const props = defineProps({
     transform: scale(0.9);
     background-color: darken($button-bg, 5%);
   }
-
 }
 </style>

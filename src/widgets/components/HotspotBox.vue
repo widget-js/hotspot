@@ -4,10 +4,7 @@
       <slot name="header"></slot>
     </div>
     <!--  60是标题高度，24是组件上下空白的间距  -->
-    <el-scrollbar
-      :height="height - 60 - 24"
-      :wrap-style="{ backgroundColor: bodyColor, borderRadius: '12px' }"
-    >
+    <el-scrollbar :height="height - 60 - 24" :wrap-style="{ backgroundColor: bodyColor, borderRadius: '12px' }">
       <div class="hotspot-content">
         <slot name="body"></slot>
       </div>
@@ -16,17 +13,17 @@
 </template>
 
 <script lang="ts" setup>
-import {ElScrollbar} from 'element-plus'
-import {useWindowSize} from "@vueuse/core";
+import { ElScrollbar } from 'element-plus';
+import { useWindowSize } from '@vueuse/core';
 
-const props = defineProps({
+defineProps({
   bodyColor: {
     type: String,
-    default: '#fff'
-  }
-})
+    default: '#fff',
+  },
+});
 
-const {height} = useWindowSize();
+const { height } = useWindowSize();
 </script>
 
 <style scoped lang="scss">

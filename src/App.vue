@@ -1,10 +1,9 @@
 <template>
-  <router-view/>
+  <router-view />
 </template>
 
 <style lang="scss">
-@import "common/css/common.css";
+@import 'common/css/common.css';
 </style>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

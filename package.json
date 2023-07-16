@@ -11,7 +11,9 @@
     "build:local": "vite build --mode offline",
     "preview": "vite preview",
     "remote": "widget dependencies -t remote",
-    "local": "widget dependencies -t local"
+    "local": "widget dependencies -t local",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write src/ "
   },
   "pnpm": {
     "peerDependencyRules": {
@@ -40,8 +42,8 @@
   "devDependencies": {
     "@types/color": "^3.0.3",
     "@types/lodash": "^4.14.186",
-    "@typescript-eslint/eslint-plugin": "^5.42.0",
-    "@typescript-eslint/parser": "^5.42.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
@@ -54,7 +56,7 @@
     "@widget-js/vite-plugin-widget": "^1.0.9",
     "css-loader": "^6.7.2",
     "eslint": "^8.26.0",
-    "eslint-plugin-vue": "^8.0.3",
+    "eslint-plugin-vue": "^9.15.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.8.4",
     "sass": "^1.56.0",
