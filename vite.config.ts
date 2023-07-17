@@ -10,15 +10,6 @@ import widget from '@widget-js/vite-plugin-widget';
 export default defineConfig(({mode}) => (
   {
     base: mode == 'offline' ? '' : '/hotspot/',
-    build: {
-      rollupOptions: {
-        output: {
-          entryFileNames: 'assets/[name].js',
-          chunkFileNames: 'assets/[name].js',
-          assetFileNames: 'assets/[name].[ext]'
-        }
-      }
-    },
     plugins: [vue(), widget({generateFullNamePackage: true}),
       AutoImport({
         resolvers: [ElementPlusResolver()],
