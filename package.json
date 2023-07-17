@@ -4,7 +4,6 @@
   "license": "MIT",
   "author": "Widget JS",
   "private": true,
-  "type": "commonjs",
   "scripts": {
     "serve": "vite",
     "build": "vite build",
