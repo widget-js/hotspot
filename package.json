@@ -14,6 +14,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/ "
   },
+  "type": "module",
   "pnpm": {
     "peerDependencyRules": {
       "ignoreMissing": [
@@ -26,8 +27,8 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.4.0",
-    "@widget-js/core": "^0.7.2",
-    "@widget-js/vue3": "^0.7.3",
+    "@widget-js/core": "workspace:*",
+    "@widget-js/vue3": "workspace:*",
     "axios": "^1.1.3",
     "color": "^4.2.3",
     "colorthief": "^2.4.0",
@@ -51,8 +52,8 @@
     "@vue/compiler-sfc": "^3.2.45",
     "@vue/eslint-config-typescript": "^9.1.0",
     "@vueuse/shared": "^10.1.2",
-    "@widget-js/cli": "^1.1.4",
-    "@widget-js/vite-plugin-widget": "^1.0.9",
+    "@widget-js/cli": "workspace:*",
+    "@widget-js/vite-plugin-widget": "workspace:*",
     "css-loader": "^6.7.2",
     "eslint": "^8.26.0",
     "eslint-plugin-vue": "^9.15.1",

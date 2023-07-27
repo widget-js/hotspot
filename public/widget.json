@@ -1,167 +1,4 @@
 {
-  "hash": true,
-  "widgets": [
-    {
-      "lang": "zh-CN",
-      "name": "cn.widgetjs.widgets.hotspot.zhihu",
-      "title": {
-        "zh-CN": "知乎"
-      },
-      "description": {
-        "zh-CN": "知乎热榜与日报"
-      },
-      "keywords": [
-        "recommend"
-      ],
-      "width": 4,
-      "height": 3,
-      "movable": true,
-      "permissions": [],
-      "maxWidth": 4,
-      "maxHeight": 4,
-      "minWidth": 4,
-      "minHeight": 3,
-      "backgroundThrottling": true,
-      "previewImage": "/images/preview_zhihu.png",
-      "refreshWhenResided": false,
-      "hideWhenBlur": false,
-      "supportHostedMode": 17,
-      "routes": [
-        {
-          "url": "/widget/zhihu",
-          "name": "index"
-        }
-      ]
-    },
-    {
-      "lang": "zh-CN",
-      "name": "ccn.widgetjs.widgets.hotspot.weibo",
-      "title": {
-        "zh-CN": "微博热搜"
-      },
-      "description": {
-        "zh-CN": "微博热搜"
-      },
-      "keywords": [
-        "recommend"
-      ],
-      "width": 4,
-      "height": 3,
-      "movable": true,
-      "permissions": [],
-      "maxWidth": 4,
-      "maxHeight": 6,
-      "minWidth": 4,
-      "minHeight": 3,
-      "backgroundThrottling": true,
-      "previewImage": "/images/weibo_hot_search.png",
-      "refreshWhenResided": false,
-      "hideWhenBlur": false,
-      "supportHostedMode": 17,
-      "routes": [
-        {
-          "url": "/widget/weibo",
-          "name": "index"
-        }
-      ]
-    },
-    {
-      "lang": "zh-CN",
-      "name": "cn.widgetjs.widgets.hotspot.douyin",
-      "title": {
-        "zh-CN": "抖音热榜"
-      },
-      "description": {
-        "zh-CN": "抖音热榜"
-      },
-      "keywords": [
-        "recommend"
-      ],
-      "width": 4,
-      "height": 3,
-      "movable": true,
-      "permissions": [],
-      "maxWidth": 6,
-      "maxHeight": 6,
-      "minWidth": 4,
-      "minHeight": 3,
-      "backgroundThrottling": true,
-      "previewImage": "/images/preview_douyin.png",
-      "refreshWhenResided": false,
-      "hideWhenBlur": false,
-      "supportHostedMode": 17,
-      "routes": [
-        {
-          "url": "/widget/douyin",
-          "name": "index"
-        }
-      ]
-    },
-    {
-      "lang": "zh-CN",
-      "name": "cn.widgetjs.widgets.hotspot.bilibili",
-      "title": {
-        "zh-CN": "bilibili热搜"
-      },
-      "description": {
-        "zh-CN": "看看年轻人在B站搜什么"
-      },
-      "keywords": [
-        "recommend"
-      ],
-      "width": 4,
-      "height": 3,
-      "movable": true,
-      "permissions": [],
-      "maxWidth": 6,
-      "maxHeight": 6,
-      "minWidth": 4,
-      "minHeight": 3,
-      "backgroundThrottling": true,
-      "previewImage": "/images/bilibili_hot_search.png",
-      "refreshWhenResided": false,
-      "hideWhenBlur": false,
-      "supportHostedMode": 17,
-      "routes": [
-        {
-          "url": "/widget/bilibili",
-          "name": "index"
-        }
-      ]
-    },
-    {
-      "lang": "zh-CN",
-      "name": "cn.widgetjs.widgets.hotspot.bangumi",
-      "title": {
-        "zh-CN": "B站新番时间表"
-      },
-      "description": {
-        "zh-CN": "追番小助手"
-      },
-      "keywords": [
-        "recommend"
-      ],
-      "width": 4,
-      "height": 4,
-      "movable": true,
-      "permissions": [],
-      "maxWidth": 4,
-      "maxHeight": 4,
-      "minWidth": 4,
-      "minHeight": 4,
-      "backgroundThrottling": true,
-      "previewImage": "/images/preview_bangumi.png",
-      "refreshWhenResided": false,
-      "hideWhenBlur": false,
-      "supportHostedMode": 17,
-      "routes": [
-        {
-          "url": "/widget/bangumi",
-          "name": "index"
-        }
-      ]
-    }
-  ],
   "name": "cn.widgetjs.widgets.hotspot",
   "version": "1.1.0",
   "author": "Neo Fu",
@@ -175,5 +12,168 @@
   "entry": "index.html",
   "remoteEntry": "https://rtugeek.gitee.io/hotspot",
   "remotePackage": "https://rtugeek.gitee.io/hotspot/widget.json",
-  "url": ""
+  "remote": {
+    "entry": "https://rtugeek.gitee.io/hotspot",
+    "hash": true,
+    "base": "/hotspot"
+  },
+  "hash": true,
+  "url": "",
+  "widgets": [
+    {
+      "name": "cn.widgetjs.widgets.hotspot.zhihu",
+      "title": {
+        "zh-CN": "知乎"
+      },
+      "description": {
+        "zh-CN": "知乎热榜与日报"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "lang": "zh-CN",
+      "width": 4,
+      "height": 3,
+      "maxWidth": 4,
+      "maxHeight": 4,
+      "minWidth": 4,
+      "minHeight": 3,
+      "movable": true,
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "/images/preview_zhihu.png",
+      "supportHostedMode": 17,
+      "routes": [
+        {
+          "url": "/widget/zhihu",
+          "name": "index"
+        }
+      ],
+      "permissions": []
+    },
+    {
+      "name": "cn.widgetjs.widgets.hotspot.douyin",
+      "title": {
+        "zh-CN": "抖音热榜"
+      },
+      "description": {
+        "zh-CN": "抖音热榜"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "lang": "zh-CN",
+      "width": 4,
+      "height": 3,
+      "maxWidth": 6,
+      "maxHeight": 6,
+      "minWidth": 4,
+      "minHeight": 3,
+      "movable": true,
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "/images/preview_douyin.png",
+      "supportHostedMode": 17,
+      "routes": [
+        {
+          "url": "/widget/douyin",
+          "name": "index"
+        }
+      ],
+      "permissions": []
+    },
+    {
+      "name": "ccn.widgetjs.widgets.hotspot.weibo",
+      "title": {
+        "zh-CN": "微博热搜"
+      },
+      "description": {
+        "zh-CN": "微博热搜"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "lang": "zh-CN",
+      "width": 4,
+      "height": 3,
+      "maxWidth": 4,
+      "maxHeight": 6,
+      "minWidth": 4,
+      "minHeight": 3,
+      "movable": true,
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "/images/weibo_hot_search.png",
+      "supportHostedMode": 17,
+      "routes": [
+        {
+          "url": "/widget/weibo",
+          "name": "index"
+        }
+      ],
+      "permissions": []
+    },
+    {
+      "name": "cn.widgetjs.widgets.hotspot.bilibili",
+      "title": {
+        "zh-CN": "bilibili热搜"
+      },
+      "description": {
+        "zh-CN": "看看年轻人在B站搜什么"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "lang": "zh-CN",
+      "width": 4,
+      "height": 3,
+      "maxWidth": 6,
+      "maxHeight": 6,
+      "minWidth": 4,
+      "minHeight": 3,
+      "movable": true,
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "/images/bilibili_hot_search.png",
+      "supportHostedMode": 17,
+      "routes": [
+        {
+          "url": "/widget/bilibili",
+          "name": "index"
+        }
+      ],
+      "permissions": []
+    },
+    {
+      "name": "cn.widgetjs.widgets.hotspot.bangumi",
+      "title": {
+        "zh-CN": "B站新番时间表"
+      },
+      "description": {
+        "zh-CN": "追番小助手"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "lang": "zh-CN",
+      "width": 4,
+      "height": 4,
+      "maxWidth": 4,
+      "maxHeight": 4,
+      "minWidth": 4,
+      "minHeight": 4,
+      "movable": true,
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "/images/preview_bangumi.png",
+      "supportHostedMode": 17,
+      "routes": [
+        {
+          "url": "/widget/bangumi",
+          "name": "index"
+        }
+      ],
+      "permissions": []
+    }
+  ]
 }

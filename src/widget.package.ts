@@ -1,6 +1,6 @@
 import { WidgetPackage } from '@widget-js/core';
 
-export default new WidgetPackage({
+const widgetPackage = new WidgetPackage({
   remote: {
     entry: 'https://rtugeek.gitee.io/hotspot',
     hash: true,
@@ -26,3 +26,4 @@ export default new WidgetPackage({
     devUrl: 'http://localhost:5173/hotspot',
   },
 });
+export default widgetPackage;

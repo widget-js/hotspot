@@ -41,7 +41,7 @@
 
 <script lang="ts" setup>
 import axios, { AxiosError } from 'axios';
-import { WidgetPackage } from '@widget-js/core';
+import { WidgetPackage, normalizeUrl } from '@widget-js/core';
 import { computed, ref } from 'vue';
 import BubblyButton from '@/BubblyButton.vue';
 
@@ -71,7 +71,8 @@ const openInApp = () => {
 };
 
 const getImageUrl = (url: string) => {
-  return `${import.meta.env.BASE_URL}${url}`.replaceAll('//', '/');
+  const base = widgetPackage.value?.remote?.base ?? './';
+  return normalizeUrl(`${base}/${url}`);
 };
 </script>
 
