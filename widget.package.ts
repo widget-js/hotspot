@@ -14,7 +14,6 @@ export default new WidgetPackage({
   title: {
     'zh-CN': '全网热点组件',
   },
-  url: '',
   version: '1.1.0',
   devOptions: {
     folder: './src/widgets/',

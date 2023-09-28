@@ -7,7 +7,7 @@ const description = { 'zh-CN': '微博热搜' };
 //组件关键词
 const keywords = [WidgetKeyword.RECOMMEND];
 //组件路由地址
-const url = '/widget/weibo';
+const path = '/widget/weibo';
 //组件关键词
 const WeiBoWidgetDefine = new Widget({
   name: name,
@@ -22,9 +22,10 @@ const WeiBoWidgetDefine = new Widget({
   maxWidth: 4,
   minHeight: 3,
   maxHeight: 6,
+  path:path,
   routes: [
     {
-      url: url,
+      url: path,
       name: 'index',
     },
   ],
