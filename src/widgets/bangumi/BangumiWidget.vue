@@ -91,6 +91,7 @@ $card-bg: lighten($bilibili-color, 50%);
       justify-content: center;
       place-items: center;
       border-radius: 0.2rem;
+      font-size: 0.8rem;
       background-color: rgba(255, 255, 255, 0.4);
       backdrop-filter: blur(10px);
       box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 rgba(0, 0, 0, 0.2);

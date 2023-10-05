@@ -19,7 +19,7 @@ const WeiBoWidgetDefine = new Widget({
   height: 3,
   previewImage: '/images/weibo_hot_search.png',
   minWidth: 4,
-  maxWidth: 4,
+  maxWidth: 6,
   minHeight: 3,
   maxHeight: 6,
   path:path,

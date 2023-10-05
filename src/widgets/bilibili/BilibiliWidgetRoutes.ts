@@ -1,6 +1,6 @@
 import BilibiliWidgetDefine from './Bilibili.widget';
 
-const url = BilibiliWidgetDefine.getIndexRoute().url;
+const url = BilibiliWidgetDefine.path;
 const name = BilibiliWidgetDefine.name;
 
 const BilibiliWidgetRoutes = [

@@ -6,7 +6,6 @@ import {ElementPlusResolver} from 'unplugin-vue-components/resolvers';
 import path from 'path';
 import widget from '@widget-js/vite-plugin-widget';
 // https://vitejs.dev/config/
-
 export default defineConfig(({mode}) => (
   {
     base: mode == 'offline' ? '' : '/hotspot/',

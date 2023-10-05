@@ -1,6 +1,6 @@
 import BangumiWidgetDefine from './Bangumi.widget';
 
-const url = BangumiWidgetDefine.getIndexRoute().url;
+const url = BangumiWidgetDefine.path;
 const name = BangumiWidgetDefine.name;
 
 const BangumiWidgetRoutes = [

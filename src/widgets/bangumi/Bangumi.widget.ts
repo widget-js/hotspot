@@ -19,7 +19,7 @@ const BangumiWidgetDefine = new Widget({
   width: 4,
   height: 4,
   minWidth: 4,
-  maxWidth: 4,
+  maxWidth: 6,
   minHeight: 4,
   maxHeight: 4,
   previewImage: '/images/preview_bangumi.png',

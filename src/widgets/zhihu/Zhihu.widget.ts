@@ -12,7 +12,6 @@ const path = '/widget/zhihu';
 const width = 4;
 const height = 3;
 const minWidth = 4;
-const maxWidth = 4;
 const minHeight = 3;
 const maxHeight = 4;
 const ZhihuWidgetDefine = new Widget({
@@ -24,7 +23,7 @@ const ZhihuWidgetDefine = new Widget({
   lang,
   width,
   height,
-  maxWidth,
+  maxWidth: 6,
   maxHeight,
   minWidth,
   minHeight,

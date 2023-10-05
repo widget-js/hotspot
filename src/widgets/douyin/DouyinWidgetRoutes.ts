@@ -1,6 +1,6 @@
 import DouyinWidgetDefine from './Douyin.widget';
 
-const url = DouyinWidgetDefine.getIndexRoute().url;
+const url = DouyinWidgetDefine.path;
 const name = DouyinWidgetDefine.name;
 
 const DouyinWidgetRoutes = [
