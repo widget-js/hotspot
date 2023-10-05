@@ -8,7 +8,7 @@ const description: LanguageTextMap = { 'zh-CN': '知乎热榜与日报' };
 //组件关键词
 const keywords = [WidgetKeyword.RECOMMEND];
 const lang: LanguageCode = 'zh-CN';
-const url = '/widget/zhihu';
+const path = '/widget/zhihu';
 const width = 4;
 const height = 3;
 const minWidth = 4;
@@ -28,9 +28,10 @@ const ZhihuWidgetDefine = new Widget({
   maxHeight,
   minWidth,
   minHeight,
+  path: path,
   routes: [
     {
-      url: url,
+      url: path,
       name: 'index',
     },
   ],

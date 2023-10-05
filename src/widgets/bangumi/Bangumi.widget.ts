@@ -8,7 +8,7 @@ const description = { 'zh-CN': '追番小助手' };
 //组件关键词
 const keywords = [WidgetKeyword.RECOMMEND];
 //组件路由地址
-const url = '/widget/bangumi';
+const path = '/widget/bangumi';
 //组件关键词
 const BangumiWidgetDefine = new Widget({
   name: name,
@@ -23,9 +23,10 @@ const BangumiWidgetDefine = new Widget({
   minHeight: 4,
   maxHeight: 4,
   previewImage: '/images/preview_bangumi.png',
+  path: path,
   routes: [
     {
-      url: url,
+      url: path,
       name: 'index',
     },
   ],
