@@ -72,7 +72,8 @@ const openInApp = () => {
 
 const getImageUrl = (url: string) => {
   const base = widgetPackage.value?.remote?.base ?? './';
-  return normalizeUrl(`${base}/${url}`);
+  const urlString = `${window.location.origin}${base}${url}`;
+  return normalizeUrl(urlString);
 };
 </script>
 
