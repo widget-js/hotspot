@@ -1,4 +1,4 @@
-import { WidgetPackage } from '@widget-js/core';
+import { WidgetPackage } from '@widget-js/core'
 
 const widgetPackage = new WidgetPackage({
   remote: {
@@ -25,5 +25,5 @@ const widgetPackage = new WidgetPackage({
     route: true,
     devUrl: 'http://localhost:5173/hotspot',
   },
-});
-export default widgetPackage;
+})
+export default widgetPackage

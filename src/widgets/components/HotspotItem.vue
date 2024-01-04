@@ -1,16 +1,6 @@
-<template>
-  <div class="hotspot-item" @click="openLink">
-    <div class="position">
-      <slot name="position">{{ position }}</slot>
-    </div>
-    <div class="title">{{ title }}</div>
-    <slot name="append"></slot>
-  </div>
-</template>
-
 <script lang="ts" setup>
-import { computed } from 'vue';
-import { BrowserWindowApi } from '@widget-js/core';
+import { computed } from 'vue'
+import { BrowserWindowApi } from '@widget-js/core'
 
 const props = defineProps({
   title: {
@@ -25,20 +15,34 @@ const props = defineProps({
     type: String,
     required: true,
   },
-});
+})
 
 function openLink() {
-  BrowserWindowApi.openUrl(props.url, { external: true });
+  BrowserWindowApi.openUrl(props.url, { external: true })
 }
 
-const colors = ['#ffe082ff', '#c5cae9ff', '#ceb1a1ff', '#d2d2d2ff'];
+const colors = ['#ffe082ff', '#c5cae9ff', '#ceb1a1ff', '#d2d2d2ff']
 const positionBackgroundColor = computed(() => {
   if (props.position < 4) {
-    return colors[props.position - 1];
+    return colors[props.position - 1]
   }
-  return colors[3];
-});
+  return colors[3]
+})
 </script>
+
+<template>
+  <div class="hotspot-item" @click="openLink">
+    <div class="position">
+      <slot name="position">
+        {{ position }}
+      </slot>
+    </div>
+    <div class="title">
+      {{ title }}
+    </div>
+    <slot name="append" />
+  </div>
+</template>
 
 <style scoped lang="scss">
 .hotspot-item {

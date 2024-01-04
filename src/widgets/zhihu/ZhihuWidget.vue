@@ -1,18 +1,97 @@
+<script lang="ts" setup>
+import axios from 'axios'
+import type { Ref } from 'vue'
+import { nextTick, onMounted, ref } from 'vue'
+import { slice } from 'lodash'
+import dayjs from 'dayjs'
+import { useIntervalFn } from '@vueuse/core'
+import type { ZhihuModel } from './model/ZhihuModel'
+import { ZhihuConvert } from './model/ZhihuModel'
+import HotspotItem from '@/widgets/components/HotspotItem.vue'
+import HotspotBox from '@/widgets/components/HotspotBox.vue'
+
+type NavType = 'hot' | 'news'
+
+const activeNav: Ref<NavType> = ref('hot')
+
+const hotList: Ref<ZhihuModel[]> = ref([])
+const newsList: Ref<ZhihuModel[]> = ref([])
+const viewList: Ref<ZhihuModel[]> = ref([])
+
+onMounted(async () => {
+  await nextTick()
+  await getHotList()
+  await getNews()
+  const yesterday = dayjs().subtract(1, 'day').format('YYYYMMDD')
+  getBeforeNews(yesterday)
+  handleChangeNav(activeNav.value)
+})
+
+function getUrl(url: string) {
+  return url.replaceAll('api.', '').replaceAll('questions', 'question')
+}
+
+const service = axios.create({
+  baseURL: 'https://www.zhihu.com/',
+  withCredentials: true,
+  timeout: 50000,
+})
+
+const newsService = axios.create({
+  baseURL: 'https://news-at.zhihu.com/',
+  withCredentials: true,
+  timeout: 50000,
+})
+
+// 知乎热榜
+async function getHotList() {
+  const res = await service.get('/api/v3/feed/topstory/hot-lists/total?limit=30&desktop=true')
+  const result = ZhihuConvert.hot2Model(res.data.data)
+  hotList.value = result
+}
+
+// 知乎日报
+async function getNews() {
+  const res = await newsService.get('/api/4/stories/latest')
+  const result = ZhihuConvert.news2Model(res.data.top_stories)
+  newsList.value = result
+}
+
+// 知乎日报-往日
+async function getBeforeNews(dateStr: string) {
+  const res = await newsService.get(`/api/4/stories/before/${dateStr}`)
+  const result = ZhihuConvert.news2Model(res.data.stories)
+  newsList.value = newsList.value.concat(result)
+}
+
+function handleChangeNav(nav: NavType) {
+  activeNav.value = nav
+  if (nav == 'hot') {
+    viewList.value = slice(Object.assign([], hotList.value), 0, 10)
+  }
+  if (nav == 'news') {
+    viewList.value = slice(Object.assign([], newsList.value), 0, 10)
+  }
+}
+
+useIntervalFn(() => {
+  getHotList()
+  getNews()
+}, 20 * 60 * 1000)
+</script>
+
 <template>
   <HotspotBox class="zhihu-box">
     <template #header>
       <div class="zhihu-header">
         <div class="zhihu-logo" />
         <div class="zhihu-top-nav">
-          <span class="hot_text zhihu-nav-item" :class="{ active: activeNav == 'hot' }" @click="handleChangeNav('hot')"
-            >热榜</span
-          >
+          <span class="hot_text zhihu-nav-item" :class="{ active: activeNav == 'hot' }" @click="handleChangeNav('hot')">热榜</span>
           <span
             class="news_text zhihu-nav-item"
             :class="{ active: activeNav == 'news' }"
             @click="handleChangeNav('news')"
-            >日报</span
-          >
+          >日报</span>
         </div>
         <div class="zhihu-liukanshan" />
       </div>
@@ -20,12 +99,13 @@
     <template #body>
       <HotspotItem
         v-for="(item, index) in viewList"
-        :url="getUrl(item.url)"
         :key="index"
+        :url="getUrl(item.url)"
         :title="item.title"
-        :position="index + 1">
+        :position="index + 1"
+      >
         <template #append>
-          <div class="zhihu-hot" v-if="item.hot" @click="getUrl(item.url)">
+          <div v-if="item.hot" class="zhihu-hot" @click="getUrl(item.url)">
             <span class="mgc_fire_fill" />
             <span class="zhihu-hot-count">{{ item.hot.replaceAll(' ', '') }}</span>
           </div>
@@ -34,88 +114,6 @@
     </template>
   </HotspotBox>
 </template>
-
-<script lang="ts" setup>
-import axios from 'axios';
-import { nextTick, onMounted, Ref, ref } from 'vue';
-import { ZhihuConvert, ZhihuModel } from './model/ZhihuModel';
-import { slice } from 'lodash';
-import dayjs from 'dayjs';
-import HotspotItem from '@/widgets/components/HotspotItem.vue';
-import HotspotBox from '@/widgets/components/HotspotBox.vue';
-import { useIntervalFn } from '@vueuse/core';
-
-type NavType = 'hot' | 'news';
-
-const activeNav: Ref<NavType> = ref('hot');
-
-const hotList: Ref<ZhihuModel[]> = ref([]);
-const newsList: Ref<ZhihuModel[]> = ref([]);
-const viewList: Ref<ZhihuModel[]> = ref([]);
-
-onMounted(async () => {
-  await nextTick();
-  await getHotList();
-  await getNews();
-  const yesterday = dayjs().subtract(1, 'day').format('YYYYMMDD');
-  getBeforeNews(yesterday);
-  handleChangeNav(activeNav.value);
-});
-
-function getUrl(url: string) {
-  return url.replaceAll('api.', '').replaceAll('questions', 'question');
-}
-
-// 知乎热榜
-async function getHotList() {
-  const res = await service.get('/api/v3/feed/topstory/hot-lists/total?limit=30&desktop=true');
-  const result = ZhihuConvert.hot2Model(res.data.data);
-  hotList.value = result;
-}
-
-// 知乎日报
-async function getNews() {
-  const res = await newsService.get('/api/4/stories/latest');
-  const result = ZhihuConvert.news2Model(res.data.top_stories);
-  console.log(result);
-  newsList.value = result;
-}
-
-// 知乎日报-往日
-async function getBeforeNews(dateStr: string) {
-  const res = await newsService.get('/api/4/stories/before/' + dateStr);
-  const result = ZhihuConvert.news2Model(res.data.stories);
-  newsList.value = newsList.value.concat(result);
-}
-
-function handleChangeNav(nav: NavType) {
-  activeNav.value = nav;
-  if (nav == 'hot') {
-    viewList.value = slice(Object.assign([], hotList.value), 0, 10);
-  }
-  if (nav == 'news') {
-    viewList.value = slice(Object.assign([], newsList.value), 0, 10);
-  }
-}
-
-const service = axios.create({
-  baseURL: 'https://www.zhihu.com/',
-  withCredentials: true,
-  timeout: 50000,
-});
-
-const newsService = axios.create({
-  baseURL: 'https://news-at.zhihu.com/',
-  withCredentials: true,
-  timeout: 50000,
-});
-
-useIntervalFn(() => {
-  getHotList();
-  getNews();
-  console.log('refresh');
-}, 20 * 60 * 1000);
-</script>
 
 <style scoped lang="scss">
 .zhihu-box {

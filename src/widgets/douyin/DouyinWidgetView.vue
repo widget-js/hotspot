@@ -1,11 +1,12 @@
+<script lang="ts" setup>
+import { WidgetWrapper } from '@widget-js/vue3'
+import DouyinWidget from './DouyinWidget.vue'
+</script>
+
 <template>
-  <widget-wrapper shadow-color="#383a58">
-    <douyin-widget />
-  </widget-wrapper>
+  <WidgetWrapper shadow-color="#383a58">
+    <DouyinWidget />
+  </WidgetWrapper>
 </template>
 
-<script lang="ts" setup>
-import DouyinWidget from './DouyinWidget.vue';
-import { WidgetWrapper } from '@widget-js/vue3';
-</script>
 <style scoped></style>

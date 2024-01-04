@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { BangumiSeason } from '@/widgets/bangumi/model/BangumiResult';
-import { BrowserWindowApi } from '@widget-js/core';
-import { nextTick, onMounted, PropType, ref } from 'vue';
-// @ts-ignore
-import ColorThief from 'colorthief';
-import Color from 'color';
+import { BrowserWindowApi } from '@widget-js/core'
+import type { PropType } from 'vue'
+import { nextTick, onMounted, ref } from 'vue'
+
+import ColorThief from 'colorthief'
+import Color from 'color'
+import type { BangumiSeason } from '@/widgets/bangumi/model/BangumiResult'
 
 const props = defineProps({
   item: {
@@ -15,66 +16,76 @@ const props = defineProps({
     type: Boolean,
     default: false,
   },
-});
-const onBangumiClick = (season: BangumiSeason) => {
-  BrowserWindowApi.openUrl(season.url, { external: true });
-};
-const bgStartColor = ref<string>('#f0fbff');
-const bgEndColor = ref<string>('#f0fbff');
-const bgBorderColor = ref<string>('#f0fbff');
-const textColor = ref<string>('#001b24');
-const rgbToHex = (r, g, b) =>
-  '#' +
+})
+function onBangumiClick(season: BangumiSeason) {
+  BrowserWindowApi.openUrl(season.url, { external: true })
+}
+const bgStartColor = ref<string>('#f0fbff')
+const bgEndColor = ref<string>('#f0fbff')
+const bgBorderColor = ref<string>('#f0fbff')
+const textColor = ref<string>('#001b24')
+function rgbToHex(r, g, b) {
+  return `#${
   [r, g, b]
     .map((x) => {
-      const hex = x.toString(16);
-      return hex.length === 1 ? '0' + hex : hex;
+      const hex = x.toString(16)
+      return hex.length === 1 ? `0${hex}` : hex
     })
-    .join('');
+    .join('')}`
+}
 
-const getImgColor = (img) => {
-  const colorThief = new ColorThief();
-  const palette = colorThief.getPalette(img, 5);
-  const palette1 = palette[1];
-  const color1 = Color.rgb(palette1[0], palette1[1], palette1[2]);
-  bgStartColor.value = color1.string();
-  const color2 = palette[2];
-  bgEndColor.value = rgbToHex(color2[0], color2[1], color2[2]);
-  const text = palette[0];
+function getImgColor(img) {
+  const colorThief = new ColorThief()
+  const palette = colorThief.getPalette(img, 5)
+  const palette1 = palette[1]
+  const color1 = Color.rgb(palette1[0], palette1[1], palette1[2])
+  bgStartColor.value = color1.string()
+  const color2 = palette[2]
+  bgEndColor.value = rgbToHex(color2[0], color2[1], color2[2])
+  const text = palette[0]
   if (color1.isLight()) {
-    textColor.value = Color.rgb(text[0], text[1], text[2]).darken(0.5).string();
-  } else {
-    textColor.value = Color.rgb(text[0], text[1], text[2]).lighten(0.5).string();
+    textColor.value = Color.rgb(text[0], text[1], text[2]).darken(0.5).string()
+  }
+  else {
+    textColor.value = Color.rgb(text[0], text[1], text[2]).lighten(0.5).string()
   }
 
-  bgBorderColor.value = bgStartColor.value + '66';
-};
+  bgBorderColor.value = `${bgStartColor.value}66`
+}
 onMounted(async () => {
-  await nextTick();
-  const img = document.querySelector(`#cover-${props.item.ep_id}>img`);
+  await nextTick()
+  const img = document.querySelector(`#cover-${props.item.ep_id}>img`)
   // Make sure image is finished loading
   if (img?.complete) {
-    getImgColor(img);
-  } else {
-    img?.addEventListener('load', function () {
-      getImgColor(img);
-    });
+    getImgColor(img)
   }
-});
+  else {
+    img?.addEventListener('load', () => {
+      getImgColor(img)
+    })
+  }
+})
 </script>
 
 <template>
   <div class="bangumi">
-    <div class="pub-time">{{ item.pub_time }} <span></span><span></span><span></span><span></span><span></span></div>
+    <div class="pub-time">
+      {{ item.pub_time }} <span /><span /><span /><span /><span />
+    </div>
     <div class="card" @click="onBangumiClick(item)">
       <el-avatar
         :id="`cover-${item.ep_id}`"
         shape="square"
         size="large"
-        :src="item.square_cover == '' ? item.cover : item.square_cover" />
+        :src="item.square_cover == '' ? item.cover : item.square_cover"
+      />
       <div class="info">
-        <div class="title">{{ item.title }}</div>
-        <div class="pub-index">{{ item.pub_index }}</div>
+        <div class="title">
+          {{ item.title }}
+        </div>
+        <div class="pub-index">
+          {{ item.pub_index }}
+        </div>
       </div>
     </div>
   </div>

@@ -1,5 +1,10 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router';
-import WidgetRouter from '@/widgets/widget-router';
+import type { RouteRecordRaw,
+} from 'vue-router'
+import {
+  createRouter,
+  createWebHashHistory,
+} from 'vue-router'
+import WidgetRouter from '@/widgets/widget-router'
 
 /**
  * 组件路由都以 /widget/开头，e.g. /widget/countdown
@@ -13,10 +18,10 @@ const routes: Array<RouteRecordRaw> = [
     name: 'Index',
     component: () => import(/* webpackChunkName: "index" */ '../LandingPage.vue'),
   },
-];
+]
 
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
-});
-export default router;
+})
+export default router

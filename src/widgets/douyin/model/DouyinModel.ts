@@ -1,17 +1,17 @@
 export interface DouyinModel {
-  position: number;
-  word: string;
+  position: number
+  word: string
   /**
    * 0-无 1-新 3-热 5-首发 8-独家 爆、挑战、同城、直播热点、
    */
-  label: 0;
-  hot_value: number;
+  label: 0
+  hot_value: number
 }
 
 export interface Label {
-  label: number;
-  title: string;
-  backgroundColor?: string;
+  label: number
+  title: string
+  backgroundColor?: string
 }
 
 export const DouyinLabels: Label[] = [
@@ -43,4 +43,4 @@ export const DouyinLabels: Label[] = [
     label: 9,
     title: '',
   },
-];
+]

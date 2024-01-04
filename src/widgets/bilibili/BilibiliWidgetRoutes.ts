@@ -1,7 +1,7 @@
-import BilibiliWidgetDefine from './Bilibili.widget';
+import BilibiliWidgetDefine from './Bilibili.widget'
 
-const url = BilibiliWidgetDefine.path;
-const name = BilibiliWidgetDefine.name;
+const url = BilibiliWidgetDefine.path
+const name = BilibiliWidgetDefine.name
 
 const BilibiliWidgetRoutes = [
   {
@@ -9,6 +9,6 @@ const BilibiliWidgetRoutes = [
     name: `${name}`,
     component: () => import(/* webpackChunkName: "com.wisdom.widgets.bilibili" */ './BilibiliWidgetView.vue'),
   },
-];
+]
 
-export default BilibiliWidgetRoutes;
+export default BilibiliWidgetRoutes

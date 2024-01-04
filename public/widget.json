@@ -57,78 +57,6 @@
       ]
     },
     {
-      "name": "ccn.widgetjs.widgets.hotspot.weibo",
-      "title": {
-        "zh-CN": "微博热搜"
-      },
-      "description": {
-        "zh-CN": "微博热搜"
-      },
-      "keywords": [
-        "recommend"
-      ],
-      "security": false,
-      "permissions": [],
-      "lang": "zh-CN",
-      "width": 4,
-      "height": 3,
-      "maxWidth": 6,
-      "webviewTag": false,
-      "maxHeight": 6,
-      "minWidth": 4,
-      "minHeight": 3,
-      "movable": true,
-      "singleton": false,
-      "resizable": true,
-      "path": "/widget/weibo",
-      "meta": {},
-      "backgroundThrottling": true,
-      "previewImage": "/images/weibo_hot_search.png",
-      "supportDeployMode": 17,
-      "routes": [
-        {
-          "url": "/widget/weibo",
-          "name": "index"
-        }
-      ]
-    },
-    {
-      "name": "cn.widgetjs.widgets.hotspot.douyin",
-      "title": {
-        "zh-CN": "抖音热榜"
-      },
-      "description": {
-        "zh-CN": "抖音热榜"
-      },
-      "keywords": [
-        "recommend"
-      ],
-      "security": false,
-      "permissions": [],
-      "lang": "zh-CN",
-      "width": 4,
-      "height": 3,
-      "maxWidth": 6,
-      "webviewTag": false,
-      "maxHeight": 6,
-      "minWidth": 4,
-      "minHeight": 3,
-      "movable": true,
-      "singleton": false,
-      "resizable": true,
-      "path": "/widget/douyin",
-      "meta": {},
-      "backgroundThrottling": true,
-      "previewImage": "/images/preview_douyin.png",
-      "supportDeployMode": 17,
-      "routes": [
-        {
-          "url": "/widget/douyin",
-          "name": "index"
-        }
-      ]
-    },
-    {
       "name": "cn.widgetjs.widgets.hotspot.bilibili",
       "title": {
         "zh-CN": "bilibili热搜"
@@ -196,6 +124,78 @@
       "routes": [
         {
           "url": "/widget/bangumi",
+          "name": "index"
+        }
+      ]
+    },
+    {
+      "name": "ccn.widgetjs.widgets.hotspot.weibo",
+      "title": {
+        "zh-CN": "微博热搜"
+      },
+      "description": {
+        "zh-CN": "微博热搜"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "security": false,
+      "permissions": [],
+      "lang": "zh-CN",
+      "width": 4,
+      "height": 3,
+      "maxWidth": 6,
+      "webviewTag": false,
+      "maxHeight": 6,
+      "minWidth": 4,
+      "minHeight": 3,
+      "movable": true,
+      "singleton": false,
+      "resizable": true,
+      "path": "/widget/weibo",
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "/images/weibo_hot_search.png",
+      "supportDeployMode": 17,
+      "routes": [
+        {
+          "url": "/widget/weibo",
+          "name": "index"
+        }
+      ]
+    },
+    {
+      "name": "cn.widgetjs.widgets.hotspot.douyin",
+      "title": {
+        "zh-CN": "抖音热榜"
+      },
+      "description": {
+        "zh-CN": "抖音热榜"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "security": false,
+      "permissions": [],
+      "lang": "zh-CN",
+      "width": 4,
+      "height": 3,
+      "maxWidth": 6,
+      "webviewTag": false,
+      "maxHeight": 6,
+      "minWidth": 4,
+      "minHeight": 3,
+      "movable": true,
+      "singleton": false,
+      "resizable": true,
+      "path": "/widget/douyin",
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "/images/preview_douyin.png",
+      "supportDeployMode": 17,
+      "routes": [
+        {
+          "url": "/widget/douyin",
           "name": "index"
         }
       ]

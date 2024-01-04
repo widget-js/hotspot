@@ -7,12 +7,12 @@ defineProps({
   label: {
     type: String,
   },
-});
+})
 </script>
 
 <template>
   <button class="bubbly-button">
-    <slot name="icon"></slot>
+    <slot name="icon" />
     {{ label }}
   </button>
 </template>

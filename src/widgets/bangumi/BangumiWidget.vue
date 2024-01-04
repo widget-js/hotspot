@@ -1,64 +1,68 @@
+<script lang="ts" setup>
+import axios from 'axios'
+import { ref } from 'vue'
+import dayjs from 'dayjs'
+import { useWidgetSize } from '@widget-js/vue3'
+import { useIntervalFn } from '@vueuse/core'
+import BangumiItem from '@/widgets/bangumi/BangumiItem.vue'
+import type { BangumiResult, BangumiResultItem } from '@/widgets/bangumi/model/BangumiResult'
+
+const items = ref<BangumiResultItem[]>([])
+const activeItem = ref<BangumiResultItem>()
+
+function refresh() {
+  axios.get('https://bangumi.bilibili.com/web_api/timeline_global').then((result) => {
+    const data = result.data as BangumiResult
+    items.value = data.result.splice(data.result.length - 9, 7)
+    for (const valueElement of items.value) {
+      const date = dayjs(valueElement.date_ts * 1000)
+      valueElement.weekday = date.format('ddd')
+      valueElement.dayOfMonth = date.date()
+      if (valueElement.is_today) {
+        activeItem.value = valueElement
+      }
+    }
+  })
+}
+
+refresh()
+
+const { width, height } = useWidgetSize()
+
+function weekdayClick(item: BangumiResultItem) {
+  activeItem.value = item
+}
+
+useIntervalFn(() => {
+  refresh()
+}, 1000 * 60 * 60)
+</script>
+
 <template>
   <div class="bangumi-widget">
     <div class="weekdays">
       <div
-        class="weekday"
         v-for="item in items"
+        :key="item.date_ts"
+        class="weekday"
+        :class="{ 'is-today': item.is_today, 'active': item == activeItem }"
         @click="weekdayClick(item)"
-        :class="{ 'is-today': item.is_today, active: item == activeItem }"
-        :key="item.date_ts">
-        <div class="day-of-month">{{ item.dayOfMonth }}</div>
-        <div class="weekday-name">{{ item.weekday }}</div>
+      >
+        <div class="day-of-month">
+          {{ item.dayOfMonth }}
+        </div>
+        <div class="weekday-name">
+          {{ item.weekday }}
+        </div>
       </div>
     </div>
     <el-scrollbar :height="height - 78" wrap-style="padding:12px 0;">
       <div class="bangumis" :style="{ width: `${width}px` }">
-        <bangumi-item v-for="item in activeItem?.seasons" :key="item.ep_id" :item="item" />
+        <BangumiItem v-for="item in activeItem?.seasons" :key="item.ep_id" :item="item" />
       </div>
     </el-scrollbar>
   </div>
 </template>
-
-<script lang="ts" setup>
-import axios from 'axios';
-import { BangumiResult, BangumiResultItem } from '@/widgets/bangumi/model/BangumiResult';
-import { ref } from 'vue';
-import dayjs from 'dayjs';
-import { useWidgetSize } from '@widget-js/vue3';
-import BangumiItem from '@/widgets/bangumi/BangumiItem.vue';
-import { useIntervalFn } from '@vueuse/core';
-
-const items = ref<BangumiResultItem[]>([]);
-const activeItem = ref<BangumiResultItem>();
-
-const refresh = () => {
-  axios.get('https://bangumi.bilibili.com/web_api/timeline_global').then((result) => {
-    const data = result.data as BangumiResult;
-    items.value = data.result.splice(data.result.length - 9, 7);
-    console.log(items.value);
-    for (let valueElement of items.value) {
-      const date = dayjs(valueElement.date_ts * 1000);
-      valueElement.weekday = date.format('ddd');
-      valueElement.dayOfMonth = date.date();
-      if (valueElement.is_today) {
-        activeItem.value = valueElement;
-      }
-    }
-  });
-};
-
-refresh();
-
-const { width, height } = useWidgetSize();
-
-const weekdayClick = (item: BangumiResultItem) => {
-  activeItem.value = item;
-};
-
-useIntervalFn(() => {
-  refresh();
-}, 1000 * 60 * 60);
-</script>
 
 <style scoped lang="scss">
 $bilibili-color: #00aeec;

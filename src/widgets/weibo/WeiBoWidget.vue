@@ -1,9 +1,56 @@
+<script lang="ts" setup>
+import axios from 'axios'
+import { useIntervalFn } from '@vueuse/core'
+import type { Ref } from 'vue'
+import { nextTick, onMounted, ref } from 'vue'
+import type { WeiBoModel } from './model/WeiBoModel'
+import HotspotBox from '@/widgets/components/HotspotBox.vue'
+import HotspotItem from '@/widgets/components/HotspotItem.vue'
+
+const viewList: Ref<WeiBoModel[]> = ref([])
+
+onMounted(async () => {
+  await nextTick()
+  await getHotList()
+})
+
+useIntervalFn(() => {
+  getHotList()
+}, 20 * 60 * 1000)
+
+function getLabel(item: WeiBoModel): string {
+  if (item.icon_desc) {
+    return item.icon_desc
+  }
+  else if (item.label_name) {
+    return item.label_name
+  }
+  else {
+    return item.small_icon_desc
+  }
+}
+
+const service = axios.create({
+  baseURL: 'https://weibo.com',
+  withCredentials: true,
+  timeout: 50000,
+})
+
+// 知乎热榜
+async function getHotList() {
+  const res = await service.get('/ajax/side/hotSearch')
+  viewList.value = res.data.data.realtime
+}
+</script>
+
 <template>
   <HotspotBox class="weibo-box">
     <template #header>
       <div class="weibo_header">
-        <img src="./images/weibo.svg" style="margin-right: 8px" height="18" alt="" />
-        <div class="weibo-top-nav">微博热搜</div>
+        <img src="./images/weibo.svg" style="margin-right: 8px" height="18" alt="">
+        <div class="weibo-top-nav">
+          微博热搜
+        </div>
       </div>
     </template>
     <template #body>
@@ -12,9 +59,10 @@
         :key="index"
         :url="`https://s.weibo.com/weibo?q=${item.word}`"
         :title="item.word"
-        :position="index + 1">
+        :position="index + 1"
+      >
         <template #append>
-          <span class="weibo-label" :style="{ backgroundColor: item.small_icon_desc_color }" v-if="getLabel(item)">{{
+          <span v-if="getLabel(item)" class="weibo-label" :style="{ backgroundColor: item.small_icon_desc_color }">{{
             getLabel(item)
           }}</span>
         </template>
@@ -22,50 +70,6 @@
     </template>
   </HotspotBox>
 </template>
-
-<script lang="ts" setup>
-import axios from 'axios';
-import { useIntervalFn } from '@vueuse/core';
-import { nextTick, onMounted, Ref, ref } from 'vue';
-import { WeiBoModel } from './model/WeiBoModel';
-import HotspotBox from '@/widgets/components/HotspotBox.vue';
-import HotspotItem from '@/widgets/components/HotspotItem.vue';
-
-const viewList: Ref<WeiBoModel[]> = ref([]);
-
-onMounted(async () => {
-  await nextTick();
-  await getHotList();
-});
-
-useIntervalFn(() => {
-  getHotList();
-  console.log('refresh');
-}, 20 * 60 * 1000);
-
-function getLabel(item: WeiBoModel): string {
-  if (item.icon_desc) {
-    return item.icon_desc;
-  } else if (item.label_name) {
-    return item.label_name;
-  } else {
-    return item.small_icon_desc;
-  }
-}
-
-// 知乎热榜
-async function getHotList() {
-  const res = await service.get('/ajax/side/hotSearch');
-  viewList.value = res.data.data.realtime;
-  console.info('weibo hot list', viewList.value);
-}
-
-const service = axios.create({
-  baseURL: 'https://weibo.com',
-  withCredentials: true,
-  timeout: 50000,
-});
-</script>
 
 <style scoped lang="scss">
 .weibo-box {

@@ -1,9 +1,10 @@
 {
   "name": "@widget-js/hotspot",
+  "type": "module",
   "version": "0.1.1",
-  "license": "MIT",
-  "author": "Widget JS",
   "private": true,
+  "author": "Widget JS",
+  "license": "MIT",
   "scripts": {
     "serve": "vite",
     "build": "vite build",
@@ -11,19 +12,8 @@
     "preview": "vite preview",
     "remote": "widget dependencies -t remote && pnpm install",
     "local": "widget dependencies -t local && pnpm install",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
-    "format": "prettier --write src/ "
-  },
-  "type": "module",
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "react",
-        "react-dom",
-        "rollup",
-        "@types/react"
-      ]
-    }
+    "lint": "eslint --cache .",
+    "lint:fix": "eslint --cache . --fix"
   },
   "dependencies": {
     "@vueuse/core": "^9.4.0",
@@ -40,6 +30,7 @@
     "vue-router": "^4.0.3"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.6.1",
     "@types/color": "^3.0.3",
     "@types/lodash": "^4.14.186",
     "@typescript-eslint/eslint-plugin": "^6.0.0",
@@ -55,12 +46,14 @@
     "@widget-js/cli": "^1.1.11",
     "@widget-js/vite-plugin-widget": "^1.2.2",
     "css-loader": "^6.7.2",
-    "eslint": "^8.26.0",
+    "eslint": "8.48.0",
     "eslint-plugin-vue": "^9.15.1",
-    "lint-staged": "^13.0.3",
+    "lint-staged": "^13.2.2",
     "prettier": "^2.8.4",
     "sass": "^1.56.0",
     "sass-loader": "^12.0.0",
+    "simple-git": "^3.22.0",
+    "simple-git-hooks": "^2.9.0",
     "style-loader": "^3.3.1",
     "tsconfig-paths-webpack-plugin": "^4.0.0",
     "typescript": "^5.2.2",
@@ -69,5 +62,23 @@
     "vite": "^4.4.11",
     "vue-loader": "^16.8.3",
     "vue-tsc": "^1.0.11"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "react",
+        "react-dom",
+        "rollup",
+        "@types/react"
+      ]
+    }
+  },
+  "simple-git-hooks": {
+    "pre-commit": "eslint --cache --fix"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md}": [
+      "eslint --cache --fix"
+    ]
   }
 }

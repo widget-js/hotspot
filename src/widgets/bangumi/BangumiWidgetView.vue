@@ -1,12 +1,12 @@
-<template>
-  <widget-wrapper>
-    <bangumi-widget></bangumi-widget>
-  </widget-wrapper>
-</template>
-
 <script lang="ts" setup>
-import BangumiWidget from './BangumiWidget.vue';
-import { WidgetWrapper } from '@widget-js/vue3';
+import { WidgetWrapper } from '@widget-js/vue3'
+import BangumiWidget from './BangumiWidget.vue'
 </script>
+
+<template>
+  <WidgetWrapper>
+    <BangumiWidget />
+  </WidgetWrapper>
+</template>
 
 <style scoped></style>
