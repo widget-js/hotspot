@@ -48,7 +48,7 @@
     "css-loader": "^6.7.2",
     "eslint": "8.48.0",
     "eslint-plugin-vue": "^9.15.1",
-    "lint-staged": "^13.2.2",
+    "lint-staged": "^15.2.0",
     "prettier": "^2.8.4",
     "sass": "^1.56.0",
     "sass-loader": "^12.0.0",
@@ -74,7 +74,7 @@
     }
   },
   "simple-git-hooks": {
-    "pre-commit": "eslint --cache --fix"
+    "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
     "*.{js,ts,tsx,vue,md}": [

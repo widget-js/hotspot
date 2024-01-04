@@ -35,8 +35,6 @@ function getImageUrl(url: string) {
   const urlString = `${window.location.origin}${base}${url}`
   return normalizeUrl(urlString)
 }
-
-
 </script>
 
 <template>
@@ -79,9 +77,6 @@ function getImageUrl(url: string) {
       </template>
     </div>
   </div>
-
-
-
 </template>
 
 <style scoped lang="scss">
