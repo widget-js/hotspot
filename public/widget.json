@@ -21,42 +21,6 @@
   "url": "",
   "widgets": [
     {
-      "name": "cn.widgetjs.widgets.hotspot.zhihu",
-      "title": {
-        "zh-CN": "知乎"
-      },
-      "description": {
-        "zh-CN": "知乎热榜与日报"
-      },
-      "keywords": [
-        "recommend"
-      ],
-      "security": false,
-      "permissions": [],
-      "lang": "zh-CN",
-      "width": 4,
-      "height": 3,
-      "maxWidth": 6,
-      "webviewTag": false,
-      "maxHeight": 4,
-      "minWidth": 4,
-      "minHeight": 3,
-      "movable": true,
-      "singleton": false,
-      "resizable": true,
-      "path": "/widget/zhihu",
-      "meta": {},
-      "backgroundThrottling": true,
-      "previewImage": "/images/preview_zhihu.png",
-      "supportDeployMode": 17,
-      "routes": [
-        {
-          "url": "/widget/zhihu",
-          "name": "index"
-        }
-      ]
-    },
-    {
       "name": "ccn.widgetjs.widgets.hotspot.weibo",
       "title": {
         "zh-CN": "微博热搜"
@@ -88,6 +52,42 @@
       "routes": [
         {
           "url": "/widget/weibo",
+          "name": "index"
+        }
+      ]
+    },
+    {
+      "name": "cn.widgetjs.widgets.hotspot.zhihu",
+      "title": {
+        "zh-CN": "知乎"
+      },
+      "description": {
+        "zh-CN": "知乎热榜与日报"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "security": false,
+      "permissions": [],
+      "lang": "zh-CN",
+      "width": 4,
+      "height": 3,
+      "maxWidth": 6,
+      "webviewTag": false,
+      "maxHeight": 4,
+      "minWidth": 4,
+      "minHeight": 3,
+      "movable": true,
+      "singleton": false,
+      "resizable": true,
+      "path": "/widget/zhihu",
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "/images/preview_zhihu.png",
+      "supportDeployMode": 17,
+      "routes": [
+        {
+          "url": "/widget/zhihu",
           "name": "index"
         }
       ]
@@ -129,42 +129,6 @@
       ]
     },
     {
-      "name": "cn.widgetjs.widgets.hotspot.bilibili",
-      "title": {
-        "zh-CN": "bilibili热搜"
-      },
-      "description": {
-        "zh-CN": "看看年轻人在B站搜什么"
-      },
-      "keywords": [
-        "recommend"
-      ],
-      "security": false,
-      "permissions": [],
-      "lang": "zh-CN",
-      "width": 4,
-      "height": 3,
-      "maxWidth": 6,
-      "webviewTag": false,
-      "maxHeight": 6,
-      "minWidth": 4,
-      "minHeight": 3,
-      "movable": true,
-      "singleton": false,
-      "resizable": true,
-      "path": "/widget/bilibili",
-      "meta": {},
-      "backgroundThrottling": true,
-      "previewImage": "/images/bilibili_hot_search.png",
-      "supportDeployMode": 17,
-      "routes": [
-        {
-          "url": "/widget/bilibili",
-          "name": "index"
-        }
-      ]
-    },
-    {
       "name": "cn.widgetjs.widgets.hotspot.bangumi",
       "title": {
         "zh-CN": "B站新番时间表"
@@ -196,6 +160,42 @@
       "routes": [
         {
           "url": "/widget/bangumi",
+          "name": "index"
+        }
+      ]
+    },
+    {
+      "name": "cn.widgetjs.widgets.hotspot.bilibili",
+      "title": {
+        "zh-CN": "bilibili热搜"
+      },
+      "description": {
+        "zh-CN": "看看年轻人在B站搜什么"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "security": false,
+      "permissions": [],
+      "lang": "zh-CN",
+      "width": 4,
+      "height": 3,
+      "maxWidth": 6,
+      "webviewTag": false,
+      "maxHeight": 6,
+      "minWidth": 4,
+      "minHeight": 3,
+      "movable": true,
+      "singleton": false,
+      "resizable": true,
+      "path": "/widget/bilibili",
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "/images/bilibili_hot_search.png",
+      "supportDeployMode": 17,
+      "routes": [
+        {
+          "url": "/widget/bilibili",
           "name": "index"
         }
       ]
