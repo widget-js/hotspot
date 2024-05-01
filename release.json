@@ -1,0 +1,11 @@
+{
+  "fileMap": [
+    {
+      "src": "./dist/",
+      "dest": "/www/wwwroot/widgetjs.cn/hotspot"
+    }
+  ],
+  "ftpConfig": {
+    "host": ["mine"]
+  }
+}

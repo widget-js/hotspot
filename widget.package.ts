@@ -2,9 +2,10 @@ import { WidgetPackage } from '@widget-js/core'
 
 export default new WidgetPackage({
   remote: {
-    entry: 'https://rtugeek.gitee.io/hotspot',
+    entry: 'https://widgetjs.cn/hotspot',
     hash: true,
     base: '/hotspot',
+    hostname: 'widgetjs.cn',
   },
   author: 'Neo Fu',
   description: {
@@ -14,12 +15,11 @@ export default new WidgetPackage({
   hash: true,
   homepage: 'https://widgetjs.cn',
   name: 'cn.widgetjs.widgets.hotspot',
-  remoteEntry: 'https://rtugeek.gitee.io/hotspot',
-  remotePackage: 'https://rtugeek.gitee.io/hotspot/widget.json',
+  remoteEntry: 'https://widgetjs.cn/hotspot',
+  remotePackage: 'https://widgetjs.cn/hotspot/widget.json',
   title: {
     'zh-CN': '全网热点组件',
   },
-  version: '1.1.0',
   devOptions: {
     folder: './src/widgets/',
     route: true,
