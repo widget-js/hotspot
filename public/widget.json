@@ -1,6 +1,6 @@
 {
   "name": "cn.widgetjs.widgets.hotspot",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Neo Fu",
   "homepage": "https://widgetjs.cn",
   "title": {
@@ -10,52 +10,17 @@
     "zh-CN": "包含知乎、B站、抖音、微博等平台的热搜组件。"
   },
   "entry": "index.html",
-  "remoteEntry": "https://rtugeek.gitee.io/hotspot",
-  "remotePackage": "https://rtugeek.gitee.io/hotspot/widget.json",
+  "remoteEntry": "https://widgetjs.cn/hotspot",
+  "remotePackage": "https://widgetjs.cn/hotspot/widget.json",
   "remote": {
-    "entry": "https://rtugeek.gitee.io/hotspot",
+    "entry": "https://widgetjs.cn/hotspot",
     "hash": true,
-    "base": "/hotspot"
+    "base": "/hotspot",
+    "hostname": "widgetjs.cn"
   },
   "hash": true,
   "url": "",
   "widgets": [
-    {
-      "name": "ccn.widgetjs.widgets.hotspot.weibo",
-      "title": {
-        "zh-CN": "微博热搜"
-      },
-      "description": {
-        "zh-CN": "微博热搜"
-      },
-      "keywords": [
-        "recommend"
-      ],
-      "security": false,
-      "permissions": [],
-      "lang": "zh-CN",
-      "width": 4,
-      "height": 3,
-      "maxWidth": 6,
-      "webviewTag": false,
-      "maxHeight": 6,
-      "minWidth": 4,
-      "minHeight": 3,
-      "movable": true,
-      "singleton": false,
-      "resizable": true,
-      "path": "/widget/weibo",
-      "meta": {},
-      "backgroundThrottling": true,
-      "previewImage": "/images/weibo_hot_search.png",
-      "supportDeployMode": 17,
-      "routes": [
-        {
-          "url": "/widget/weibo",
-          "name": "index"
-        }
-      ]
-    },
     {
       "name": "cn.widgetjs.widgets.hotspot.zhihu",
       "title": {
@@ -129,12 +94,12 @@
       ]
     },
     {
-      "name": "cn.widgetjs.widgets.hotspot.bangumi",
+      "name": "ccn.widgetjs.widgets.hotspot.weibo",
       "title": {
-        "zh-CN": "B站新番时间表"
+        "zh-CN": "微博热搜"
       },
       "description": {
-        "zh-CN": "追番小助手"
+        "zh-CN": "微博热搜"
       },
       "keywords": [
         "recommend"
@@ -143,23 +108,23 @@
       "permissions": [],
       "lang": "zh-CN",
       "width": 4,
-      "height": 4,
+      "height": 3,
       "maxWidth": 6,
       "webviewTag": false,
-      "maxHeight": 4,
+      "maxHeight": 6,
       "minWidth": 4,
-      "minHeight": 4,
+      "minHeight": 3,
       "movable": true,
       "singleton": false,
       "resizable": true,
-      "path": "/widget/bangumi",
+      "path": "/widget/weibo",
       "meta": {},
       "backgroundThrottling": true,
-      "previewImage": "/images/preview_bangumi.png",
+      "previewImage": "/images/weibo_hot_search.png",
       "supportDeployMode": 17,
       "routes": [
         {
-          "url": "/widget/bangumi",
+          "url": "/widget/weibo",
           "name": "index"
         }
       ]
@@ -196,6 +161,42 @@
       "routes": [
         {
           "url": "/widget/bilibili",
+          "name": "index"
+        }
+      ]
+    },
+    {
+      "name": "cn.widgetjs.widgets.hotspot.bangumi",
+      "title": {
+        "zh-CN": "B站新番时间表"
+      },
+      "description": {
+        "zh-CN": "追番小助手"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "security": false,
+      "permissions": [],
+      "lang": "zh-CN",
+      "width": 4,
+      "height": 4,
+      "maxWidth": 6,
+      "webviewTag": false,
+      "maxHeight": 4,
+      "minWidth": 4,
+      "minHeight": 4,
+      "movable": true,
+      "singleton": false,
+      "resizable": true,
+      "path": "/widget/bangumi",
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "/images/preview_bangumi.png",
+      "supportDeployMode": 17,
+      "routes": [
+        {
+          "url": "/widget/bangumi",
           "name": "index"
         }
       ]
