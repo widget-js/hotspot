@@ -17,6 +17,7 @@ const BangumiWidgetDefine = new Widget({
   description,
   keywords,
   lang: 'zh-CN',
+  categories: ['news'],
   width: 4,
   height: 4,
   minWidth: 4,

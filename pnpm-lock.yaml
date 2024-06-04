@@ -12,11 +12,11 @@ importers:
         specifier: ^9.4.0
         version: 9.13.0(vue@3.4.26(typescript@5.4.5))
       '@widget-js/core':
-        specifier: ^24.1.1-beta.5
-        version: 24.1.1-beta.5
+        specifier: ^24.1.1-beta.9
+        version: 24.1.1-beta.9
       '@widget-js/vue3':
-        specifier: ^24.1.1-beta.5
-        version: 24.1.1-beta.5(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))
+        specifier: ^24.1.1-beta.9
+        version: 24.1.1-beta.9(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))
       axios:
         specifier: ^1.1.3
         version: 1.6.8
@@ -85,11 +85,11 @@ importers:
         specifier: ^10.1.2
         version: 10.9.0(vue@3.4.26(typescript@5.4.5))
       '@widget-js/cli':
-        specifier: ^24.1.1-beta.5
-        version: 24.1.1-beta.5(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))
+        specifier: ^24.1.1-beta.9
+        version: 24.1.1-beta.9(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))
       '@widget-js/vite-plugin-widget':
-        specifier: ^24.1.1-beta.5
-        version: 24.1.1-beta.5(@types/node@20.12.7)(sass@1.76.0)(terser@5.31.0)
+        specifier: ^24.1.1-beta.9
+        version: 24.1.1-beta.9(@types/node@20.12.7)(sass@1.76.0)(terser@5.31.0)
       css-loader:
         specifier: ^6.7.2
         version: 6.11.0(webpack@5.91.0)
@@ -1375,34 +1375,31 @@ packages:
   '@webassemblyjs/wast-printer@1.12.1':
     resolution: {integrity: sha512-+X4WAlOisVWQMikjbcvY2e0rwPsKQ9F688lksZhBcPycBBuii3O7m8FACbDMWDojpAqvjIncrG8J0XHKyQfVeA==}
 
-  '@widget-js/cli@24.1.1-beta.5':
-    resolution: {integrity: sha512-geyq5oKzZ5w5/1ZUixYtniDryGLqa5VBbZSwYTLJcsXa/pYTCmdzEeQKmY37PiwSq+bVvKOfktjVYvRNIzvlCQ==}
+  '@widget-js/cli@24.1.1-beta.9':
+    resolution: {integrity: sha512-7T6tdx5VyOaN99DgbbtGGlTXwJzjE+SrznLX6HNorL3PCztj3GB8jW6h4U8Vyh4FHfja75NoPifHtymSSbdH8g==}
     engines: {node: ^12.0.0 || >= 14.0.0}
     hasBin: true
 
   '@widget-js/core@0.11.20':
     resolution: {integrity: sha512-JODUjA/bt51qYcxnidaBD5e/N5un/7c6rsiAYeLuoAtzk7lFLsA0xVA/2gcERt75ywH+SZEQN9VZZq7pTt75fQ==}
 
-  '@widget-js/core@24.1.1-beta.4':
-    resolution: {integrity: sha512-wfw+reWC8H+6N9mNJRFkCUV+wi9dFOsTDM9Z0haNukLnGgKr6cN3EMpw1FEEBGiXGkWC9zYPz2xJVxpkstYqDw==}
-
-  '@widget-js/core@24.1.1-beta.5':
-    resolution: {integrity: sha512-M6WwYbdAV113FS9gczy6sa9nUPCk/AE3Az1XS4ws+xFCtDCYsFFo6ZCf1Lc2FgcSUjda/NUQP/SN875uaNYIUA==}
+  '@widget-js/core@24.1.1-beta.9':
+    resolution: {integrity: sha512-A1w7xHmDnReg2YFfhqTLZDcpdrPHzbwOeepQZkDFKpWToEwtX1fpBo6PL2URJcZUNH42o9t2cWt+lWiJX84BHA==}
 
   '@widget-js/ssh-config@4.2.1':
     resolution: {integrity: sha512-8CB134IyK1BwHMEx4L7yXKRtUgst1iOEVkNJdJKEeQiMxjbHVjeArPetCtV1XnoYA1uuUc3ND2dNvKRPBc4fMw==}
 
-  '@widget-js/utils@24.1.1-beta.4':
-    resolution: {integrity: sha512-Uil8zt+dE4Mr28w73EYNdJ8QMIJP3XP6jwqlmvMpIRvTrFo7wXpF2HkKIO9K1ioJFZfdfe10STyNTpCcpH+VAw==}
+  '@widget-js/utils@24.1.1-beta.9':
+    resolution: {integrity: sha512-Iun1Onas/jv9ipZl8FV1X1MsNbv/81owobleplndDd6HY1CzgVGmvuDjWV8RAO1yGYs2fHbKYSydL2yDIRcZAg==}
 
-  '@widget-js/vite-plugin-widget@24.1.1-beta.5':
-    resolution: {integrity: sha512-YjA/uKPZedhnPGjvjYbBbweb3FmQiMPSgE2yU0LBHEo1f1OdCHCOyStpXWboFSMwLp2YAdHDql2Ft1NwDg5MMA==}
+  '@widget-js/vite-plugin-widget@24.1.1-beta.9':
+    resolution: {integrity: sha512-LdBHCTP98YMCVRdNLSrHkkUWAN05xSl7bpnIN5gT3DNBs6jsMqLF++qorRSgpsc5cQksR5aPgPl5czVg/amJaA==}
 
   '@widget-js/vue3@0.11.20':
     resolution: {integrity: sha512-j05i1FNa2LIjwdGNy0t0MubhLPkapreq0eKVc+P9omPiODbkJgWgJF4ozUIFqXkv7vGcCKznlH5n+1Oy4qddrA==}
 
-  '@widget-js/vue3@24.1.1-beta.5':
-    resolution: {integrity: sha512-jO1Mepzew3NxJrzMaSsBpgLl8/clDv7oZqe95T6a4sHBd8Fx7aiyFGZNfzDznAmFdnI55Moeof5PoenwpwqCEg==}
+  '@widget-js/vue3@24.1.1-beta.9':
+    resolution: {integrity: sha512-oDzwjOsrTTccovIgUGUIcTiD6SsRoK3W5Cuy2SYZmEF+++c3XejrxleUXyxluHwNyP0x9HHE04b9zWmFCO7uXA==}
 
   '@xtuc/ieee754@1.2.0':
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==}
@@ -2879,6 +2876,9 @@ packages:
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
+  framesync@6.1.2:
+    resolution: {integrity: sha512-jBTqhX6KaQVDyus8muwZbBeGGP0XgujBRbQ7gM7BRdS3CadCZIHiawyzYLnafYcvZIh5j8WE7cxZKFn7dXhu9g==}
+
   fresh@0.5.2:
     resolution: {integrity: sha512-zJ2mQYM18rEFOudeV4GShTGIQ7RbzA7ozbU9I/XBpm7kqgMywgmylMwXHxZJmkVoYkna9d2pVXVXPdYTP9ej8Q==}
     engines: {node: '>= 0.6'}
@@ -3054,6 +3054,9 @@ packages:
 
   header-case@2.0.4:
     resolution: {integrity: sha512-H/vuk5TEEVZwrR0lp2zed9OCo1uAILMlx0JEMgC26rzyJJ3N1v6XkwHHXJQdR2doSjcGPM6OKPYoJgf0plJ11Q==}
+
+  hey-listen@1.0.8:
+    resolution: {integrity: sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==}
 
   highlight.js@10.7.3:
     resolution: {integrity: sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==}
@@ -4138,6 +4141,9 @@ packages:
     resolution: {integrity: sha512-NCrCHhWmnQklfH4MtJMRjZ2a8c80qXeMlQMv2uVp9ISJMTt562SbGd6n2oq0PaPgKm7Z6pL9E2UlLIhC+SHL3w==}
     engines: {node: '>=4.0.0'}
 
+  popmotion@11.0.5:
+    resolution: {integrity: sha512-la8gPM1WYeFznb/JqF4GiTkRRPZsfaj2+kCxqQgr2MJylMmIKUwBfWW8Wa5fml/8gmtlD5yI01MP1QCZPWmppA==}
+
   portfinder@1.0.32:
     resolution: {integrity: sha512-on2ZJVVDXRADWE6jnQaX0ioEylzgBpQk8r55NE4wjXW1ZxO+BgDlY6DXwj20i0V8eB4SenDQ00WEaxfiIQPcxg==}
     engines: {node: '>= 0.12.0'}
@@ -4913,6 +4919,9 @@ packages:
     peerDependencies:
       webpack: ^5.0.0
 
+  style-value-types@5.1.2:
+    resolution: {integrity: sha512-Vs9fNreYF9j6W2VvuDTP7kepALi7sk0xtk2Tu8Yxi9UoajJdEVpNpCov0HsLTqXvNGKX+Uv09pkozVITi1jf3Q==}
+
   stylehacks@5.1.1:
     resolution: {integrity: sha512-sBpcd5Hx7G6seo7b1LkpttvTz7ikD0LlH5RmdcBNb6fFR0Fl7LQwHDFr300q4cwUqi+IYrFGmsIHieMBfnN/Bw==}
     engines: {node: ^10 || ^12 || >=14.0}
@@ -5059,6 +5068,9 @@ packages:
   tsconfig-paths@4.2.0:
     resolution: {integrity: sha512-NoZ4roiN7LnbKn9QqE1amc9DJfzvZXxF4xDavcOWt1BPkdx+m+0gJuPM+S0vCe7zTJMYUP0R8pO2XMr+Y8oLIg==}
     engines: {node: '>=6'}
+
+  tslib@2.4.0:
+    resolution: {integrity: sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==}
 
   tslib@2.6.2:
     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
@@ -7070,13 +7082,13 @@ snapshots:
       '@webassemblyjs/ast': 1.12.1
       '@xtuc/long': 4.2.2
 
-  '@widget-js/cli@24.1.1-beta.5(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))':
+  '@widget-js/cli@24.1.1-beta.9(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))':
     dependencies:
       '@types/archiver': 5.3.4
       '@vue/cli-shared-utils': 5.0.8
-      '@widget-js/core': 24.1.1-beta.4
+      '@widget-js/core': 24.1.1-beta.9
       '@widget-js/ssh-config': 4.2.1
-      '@widget-js/utils': 24.1.1-beta.4
+      '@widget-js/utils': 24.1.1-beta.9
       '@widget-js/vue3': 0.11.20(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))
       ali-oss: 6.20.0
       archiver: 5.3.2
@@ -7122,13 +7134,7 @@ snapshots:
       lodash: 4.17.21
       path-normalize: 6.0.13
 
-  '@widget-js/core@24.1.1-beta.4':
-    dependencies:
-      localforage: 1.10.0
-      lodash: 4.17.21
-      path-normalize: 6.0.13
-
-  '@widget-js/core@24.1.1-beta.5':
+  '@widget-js/core@24.1.1-beta.9':
     dependencies:
       localforage: 1.10.0
       lodash: 4.17.21
@@ -7136,16 +7142,16 @@ snapshots:
 
   '@widget-js/ssh-config@4.2.1': {}
 
-  '@widget-js/utils@24.1.1-beta.4':
+  '@widget-js/utils@24.1.1-beta.9':
     dependencies:
-      '@widget-js/core': 24.1.1-beta.4
+      '@widget-js/core': 24.1.1-beta.9
       consola: 2.15.3
       glob: 10.3.12
       typescript: 5.4.5
 
-  '@widget-js/vite-plugin-widget@24.1.1-beta.5(@types/node@20.12.7)(sass@1.76.0)(terser@5.31.0)':
+  '@widget-js/vite-plugin-widget@24.1.1-beta.9(@types/node@20.12.7)(sass@1.76.0)(terser@5.31.0)':
     dependencies:
-      '@widget-js/utils': 24.1.1-beta.4
+      '@widget-js/utils': 24.1.1-beta.9
       consola: 2.15.3
       glob: 10.3.12
       lodash: 4.17.21
@@ -7187,15 +7193,16 @@ snapshots:
       - universal-cookie
       - vue
 
-  '@widget-js/vue3@24.1.1-beta.5(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))':
+  '@widget-js/vue3@24.1.1-beta.9(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))':
     dependencies:
       '@icon-park/vue-next': 1.4.2(vue@3.4.26(typescript@5.4.5))
       '@vueuse/core': 9.13.0(vue@3.4.26(typescript@5.4.5))
       '@vueuse/integrations': 9.13.0(async-validator@4.2.5)(axios@1.6.8)(change-case@5.4.4)(vue@3.4.26(typescript@5.4.5))
       '@vueuse/shared': 10.9.0(vue@3.4.26(typescript@5.4.5))
-      '@widget-js/core': 24.1.1-beta.5
+      '@widget-js/core': 24.1.1-beta.9
       change-case: 5.4.4
       element-plus: 2.7.2(vue@3.4.26(typescript@5.4.5))
+      popmotion: 11.0.5
       vue-demi: 0.14.7(vue@3.4.26(typescript@5.4.5))
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -8780,6 +8787,10 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
+  framesync@6.1.2:
+    dependencies:
+      tslib: 2.4.0
+
   fresh@0.5.2: {}
 
   fs-constants@1.0.0: {}
@@ -8960,6 +8971,8 @@ snapshots:
     dependencies:
       capital-case: 1.0.4
       tslib: 2.6.2
+
+  hey-listen@1.0.8: {}
 
   highlight.js@10.7.3: {}
 
@@ -9970,6 +9983,13 @@ snapshots:
 
   pngjs@3.4.0: {}
 
+  popmotion@11.0.5:
+    dependencies:
+      framesync: 6.1.2
+      hey-listen: 1.0.8
+      style-value-types: 5.1.2
+      tslib: 2.4.0
+
   portfinder@1.0.32:
     dependencies:
       async: 2.6.4
@@ -10811,6 +10831,11 @@ snapshots:
     dependencies:
       webpack: 5.91.0
 
+  style-value-types@5.1.2:
+    dependencies:
+      hey-listen: 1.0.8
+      tslib: 2.4.0
+
   stylehacks@5.1.1(postcss@8.4.38):
     dependencies:
       browserslist: 4.23.0
@@ -10955,6 +10980,8 @@ snapshots:
       json5: 2.2.3
       minimist: 1.2.8
       strip-bom: 3.0.0
+
+  tslib@2.4.0: {}
 
   tslib@2.6.2: {}
 

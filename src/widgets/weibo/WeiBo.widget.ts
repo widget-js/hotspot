@@ -15,6 +15,7 @@ const WeiBoWidgetDefine = new Widget({
   description,
   keywords,
   lang: 'zh-CN',
+  categories: ['news'],
   width: 4,
   height: 3,
   previewImage: '/images/weibo_hot_search.png',
