@@ -66,8 +66,6 @@ async function getHotList() {
   flex-direction: column;
   overflow: hidden;
   font-family: OPPOSans-Bold, 'Microsoft Yahei', serif;
-  background: linear-gradient(#27b8f1, #00aeec);
-  border-radius: 22px;
 
   // 顶部
   .bilibili-header {

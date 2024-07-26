@@ -73,10 +73,7 @@ $card-bg: lighten($bilibili-color, 50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 22px;
-  background: white;
+  border-radius: var(--widget-border-radius);
   overflow: hidden;
 
   .weekdays {
@@ -85,6 +82,9 @@ $card-bg: lighten($bilibili-color, 50%);
     width: 100%;
     place-items: center;
     place-content: center;
+    border-radius: var(--widget-border-raidus);
+    overflow: hidden;
+
     background: #2cbae5;
     padding: 8px;
 

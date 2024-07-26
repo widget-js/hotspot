@@ -5,7 +5,7 @@ import { useWindowSize } from '@vueuse/core'
 defineProps({
   bodyColor: {
     type: String,
-    default: '#fff',
+    default: 'rgba(255,255,255,0.7)',
   },
 })
 
@@ -28,14 +28,13 @@ const { height } = useWindowSize()
 
 <style scoped lang="scss">
 .hotspot-box {
-  width: 100%;
-  height: 100%;
+  width: var(--widget-inner-width);
+  height: var(--widget-inner-height);
   position: absolute;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   font-family: OPPOSans-Bold, 'Microsoft Yahei', serif;
-  border-radius: 22px;
   padding: 16px 16px 16px 16px;
 
   .hotspot-header {
@@ -45,14 +44,12 @@ const { height } = useWindowSize()
     flex-direction: row;
     align-items: center;
     padding-bottom: 8px;
-    color: #fff;
+    color: var(--widget-color);
     font-size: 14px;
     font-weight: bold;
   }
 
   .el-scrollbar-wrap .el-scrollbar-wrap--hidden-default {
-    background-color: #fff;
-    border-radius: 16px;
   }
 }
 </style>

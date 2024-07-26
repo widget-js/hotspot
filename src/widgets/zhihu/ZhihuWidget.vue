@@ -121,8 +121,6 @@ useIntervalFn(() => {
   flex-direction: column;
   overflow: hidden;
   font-family: OPPOSans-Bold, 'Microsoft Yahei', serif;
-  background-image: linear-gradient(46deg, rgba(5, 109, 232, 1) 0, rgba(0, 168, 255, 1) 100%);
-  border-radius: 22px;
 
   // 顶部
   .zhihu-header {
@@ -172,7 +170,7 @@ useIntervalFn(() => {
 
     .zhihu-liukanshan {
       position: absolute;
-      bottom: -12px;
+      bottom: -10px;
       right: 20px;
       width: 36px;
       height: 36px;

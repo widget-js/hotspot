@@ -100,8 +100,6 @@ async function getHotList() {
 
 <style scoped lang="scss">
 .hotspot-box {
-  background-image: linear-gradient(135deg, #3e4061 0%, #1d1e2d 100%);
-
   .header {
     display: flex;
     align-content: center;

@@ -73,15 +73,10 @@ async function getHotList() {
 
 <style scoped lang="scss">
 .weibo-box {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   font-family: OPPOSans-Bold, 'Microsoft Yahei', serif;
-  background-color: #f5f5f5;
-  border-radius: 22px;
-  padding: 16px;
 
   // 顶部
   .weibo_header {
@@ -90,7 +85,6 @@ async function getHotList() {
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: #000;
     font-size: 14px;
     font-weight: bold;
 

@@ -18,7 +18,7 @@ axios
   })
 
 const openInAppUrl = computed(() => {
-  const remotePackageURL = encodeURIComponent(widgetPackage.value!.remotePackage!)
+  const remotePackageURL = encodeURIComponent(`https://${widgetPackage.value?.remote?.hostname}${widgetPackage.value?.remote?.base}`)
   return `widget://widgetjs.cn/package?url=${remotePackageURL}`
 })
 

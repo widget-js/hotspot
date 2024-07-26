@@ -12,11 +12,11 @@ importers:
         specifier: ^9.4.0
         version: 9.13.0(vue@3.4.26(typescript@5.4.5))
       '@widget-js/core':
-        specifier: ^24.1.1-beta.9
-        version: 24.1.1-beta.9
+        specifier: ^24.1.1-beta.30
+        version: 24.1.1-beta.30
       '@widget-js/vue3':
-        specifier: ^24.1.1-beta.9
-        version: 24.1.1-beta.9(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))
+        specifier: ^24.1.1-beta.31
+        version: 24.1.1-beta.31(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))
       axios:
         specifier: ^1.1.3
         version: 1.6.8
@@ -85,11 +85,11 @@ importers:
         specifier: ^10.1.2
         version: 10.9.0(vue@3.4.26(typescript@5.4.5))
       '@widget-js/cli':
-        specifier: ^24.1.1-beta.9
-        version: 24.1.1-beta.9(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))
+        specifier: ^24.1.1-beta.30
+        version: 24.1.1-beta.30(async-validator@4.2.5)(vue@3.4.26(typescript@5.4.5))
       '@widget-js/vite-plugin-widget':
-        specifier: ^24.1.1-beta.9
-        version: 24.1.1-beta.9(@types/node@20.12.7)(sass@1.76.0)(terser@5.31.0)
+        specifier: ^24.1.1-beta.30
+        version: 24.1.1-beta.30(@types/node@20.12.7)(sass@1.76.0)(terser@5.31.0)
       css-loader:
         specifier: ^6.7.2
         version: 6.11.0(webpack@5.91.0)
@@ -896,6 +896,9 @@ packages:
   '@types/connect@3.4.38':
     resolution: {integrity: sha512-K6uROf1LD88uDQqJCktA4yzL1YYAK6NgfsI0v/mTgyPKWsX1CnJ0XPSDhViejru1GcRkLWb8RlzFYJRqGUbaug==}
 
+  '@types/css-tree@2.3.8':
+    resolution: {integrity: sha512-zABG3nI2UENsx7AQv63tI5/ptoAG/7kQR1H0OvG+WTWYHOR5pfAT3cGgC8SdyCrgX/TTxJBZNmx82IjCXs1juQ==}
+
   '@types/eslint-scope@3.7.7':
     resolution: {integrity: sha512-MzMFlSLBqNF2gcHWO0G1vP/YQyfvrxZ0bF+u7mzUdZ1/xK4A4sru+nraZz5i3iEIk1l1uyicaDVTB4QbbEkAYg==}
 
@@ -1375,13 +1378,13 @@ packages:
   '@webassemblyjs/wast-printer@1.12.1':
     resolution: {integrity: sha512-+X4WAlOisVWQMikjbcvY2e0rwPsKQ9F688lksZhBcPycBBuii3O7m8FACbDMWDojpAqvjIncrG8J0XHKyQfVeA==}
 
-  '@widget-js/cli@24.1.1-beta.9':
-    resolution: {integrity: sha512-7T6tdx5VyOaN99DgbbtGGlTXwJzjE+SrznLX6HNorL3PCztj3GB8jW6h4U8Vyh4FHfja75NoPifHtymSSbdH8g==}
+  '@widget-js/cli@24.1.1-beta.30':
+    resolution: {integrity: sha512-b10vKwFKIODdV1RkJa/KxI0Jqvb13l/HjhwGyJ88NpmdIgZjSgaNVtV8WlEjVDFGlgZoh2Yoy8n5uw3+e5DJ2A==}
     engines: {node: ^12.0.0 || >= 14.0.0}
     hasBin: true
 
-  '@widget-js/core@0.11.20':
-    resolution: {integrity: sha512-JODUjA/bt51qYcxnidaBD5e/N5un/7c6rsiAYeLuoAtzk7lFLsA0xVA/2gcERt75ywH+SZEQN9VZZq7pTt75fQ==}
+  '@widget-js/core@24.1.1-beta.30':
+    resolution: {integrity: sha512-4DJNKBKkTRjrzPCAqAS/4Wl+RPE5ZYJ0LRCevWvMQvp+NGK3FqML+A/XiTBvP2m5M4LmDLmBSolq7qXGiYmH/g==}
 
   '@widget-js/core@24.1.1-beta.9':
     resolution: {integrity: sha512-A1w7xHmDnReg2YFfhqTLZDcpdrPHzbwOeepQZkDFKpWToEwtX1fpBo6PL2URJcZUNH42o9t2cWt+lWiJX84BHA==}
@@ -1389,17 +1392,17 @@ packages:
   '@widget-js/ssh-config@4.2.1':
     resolution: {integrity: sha512-8CB134IyK1BwHMEx4L7yXKRtUgst1iOEVkNJdJKEeQiMxjbHVjeArPetCtV1XnoYA1uuUc3ND2dNvKRPBc4fMw==}
 
+  '@widget-js/utils@24.1.1-beta.30':
+    resolution: {integrity: sha512-FM82W+aN9hh0YBPDKhudLVKLhHE5qe3T9YLe7sqp+1rPJyCyLD2nSDuH2q9ALl89acjs+fX7Qq07dCQ6/ggGAA==}
+
   '@widget-js/utils@24.1.1-beta.9':
     resolution: {integrity: sha512-Iun1Onas/jv9ipZl8FV1X1MsNbv/81owobleplndDd6HY1CzgVGmvuDjWV8RAO1yGYs2fHbKYSydL2yDIRcZAg==}
 
-  '@widget-js/vite-plugin-widget@24.1.1-beta.9':
-    resolution: {integrity: sha512-LdBHCTP98YMCVRdNLSrHkkUWAN05xSl7bpnIN5gT3DNBs6jsMqLF++qorRSgpsc5cQksR5aPgPl5czVg/amJaA==}
+  '@widget-js/vite-plugin-widget@24.1.1-beta.30':
+    resolution: {integrity: sha512-n9ErIgRK6UZUipgrQ/bz6+OM1QVsf/eKHEIFXEqNaJqjG1R8HFQfcJG7p8EDP80YYaRPQWVrTDv2TARENoZoZQ==}
 
-  '@widget-js/vue3@0.11.20':
-    resolution: {integrity: sha512-j05i1FNa2LIjwdGNy0t0MubhLPkapreq0eKVc+P9omPiODbkJgWgJF4ozUIFqXkv7vGcCKznlH5n+1Oy4qddrA==}
-
-  '@widget-js/vue3@24.1.1-beta.9':
-    resolution: {integrity: sha512-oDzwjOsrTTccovIgUGUIcTiD6SsRoK3W5Cuy2SYZmEF+++c3XejrxleUXyxluHwNyP0x9HHE04b9zWmFCO7uXA==}
+  '@widget-js/vue3@24.1.1-beta.31':
+    resolution: {integrity: sha512-lXd0L2fpuRg/H0Cax1QEtffKqyGvLZj+54JSxKnrwMD/AEEH9dEnIt8y/Wg3gPdLA+pAC5iu1w5JZZrizTOzBA==}
 
   '@xtuc/ieee754@1.2.0':
     resolution: {integrity: sha512-DX8nKgqcGwsc0eJSqYt5lwP4DH5FlHnmuWWBRy7X0NcaGR0ZtuyeESgMwTYVEtxmsNGY+qit4QYT/MIYTOTPeA==}
@@ -1581,6 +1584,9 @@ packages:
 
   axios@1.6.8:
     resolution: {integrity: sha512-v/ZHtJDU39mDpyBoFVkETcd/uNdxrWRrg3bKpOKzXFA6Bvqopts6ALSMU3y6ijYxbw2B+wPrIv46egTzJXCLGQ==}
+
+  axios@1.7.2:
+    resolution: {integrity: sha512-2A8QhOMrbomlDuiLeK9XibIBzuHeRcqqNOHp0Cyp5EoJ1IFDh+XZH3A6BkXtv0K4gFGCI0Y4BM7B1wOEi0Rmgw==}
 
   babel-loader@8.3.0:
     resolution: {integrity: sha512-H8SvsMF+m9t15HNLMipppzkC+Y2Yq+v3SonZyU70RBL/h1gxPkH08Ot8pEE9Z4Kd+czyWJClmFS8qzIP9OZ04Q==}
@@ -1913,6 +1919,10 @@ packages:
   consola@2.15.3:
     resolution: {integrity: sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==}
 
+  consola@3.2.3:
+    resolution: {integrity: sha512-I5qxpzLv+sJhTVEoLYNcTW+bThDCPsit0vLNKShZx6rLtpilNpmmeTPaeqJb9ZE9dV3DGaeby6Vuhrw38WjeyQ==}
+    engines: {node: ^14.18.0 || >=16.10.0}
+
   consolidate@0.15.1:
     resolution: {integrity: sha512-DW46nrsMJgy9kqAbPt5rKaCr7uFtpo4mSUvLHIUbJEjm0vo+aY5QLwBUq3FK4tRnJr/X0Psc0C4jf/h+HtXSMw==}
     engines: {node: '>= 0.10.0'}
@@ -2193,6 +2203,10 @@ packages:
   css-tree@1.1.3:
     resolution: {integrity: sha512-tRpdppF7TRazZrjJ6v3stzv93qxRcSsFmW6cX0Zm2NVKpxE1WV1HblnghVv9TreireHkqI/VDEsfolRF1p6y7Q==}
     engines: {node: '>=8.0.0'}
+
+  css-tree@2.3.1:
+    resolution: {integrity: sha512-6Fv1DV/TYw//QF5IzQdqsNDjx/wc8TrMBZsqjL9eW01tWb7R7k/mq+/VXfJCl7SoD5emsJop9cOByJZfs8hYIw==}
+    engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0}
 
   css-what@6.1.0:
     resolution: {integrity: sha512-HTUrgRJ7r4dsZKU6GjmpfRK1O76h97Z8MfS1G0FozR+oF2kG6Vfe8JE6zwrkbxigziPHinCJ+gCPjA9EaBDtRw==}
@@ -3647,6 +3661,9 @@ packages:
 
   mdn-data@2.0.14:
     resolution: {integrity: sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==}
+
+  mdn-data@2.0.30:
+    resolution: {integrity: sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==}
 
   media-typer@0.3.0:
     resolution: {integrity: sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==}
@@ -6277,6 +6294,8 @@ snapshots:
     dependencies:
       '@types/node': 20.12.7
 
+  '@types/css-tree@2.3.8': {}
+
   '@types/eslint-scope@3.7.7':
     dependencies:
       '@types/eslint': 8.56.10
@@ -6990,6 +7009,19 @@ snapshots:
       - '@vue/composition-api'
       - vue
 
+  '@vueuse/integrations@9.13.0(async-validator@4.2.5)(axios@1.7.2)(change-case@5.4.4)(vue@3.4.26(typescript@5.4.5))':
+    dependencies:
+      '@vueuse/core': 9.13.0(vue@3.4.26(typescript@5.4.5))
+      '@vueuse/shared': 9.13.0(vue@3.4.26(typescript@5.4.5))
+      vue-demi: 0.14.7(vue@3.4.26(typescript@5.4.5))
+    optionalDependencies:
+      async-validator: 4.2.5
+      axios: 1.7.2
+      change-case: 5.4.4
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
+
   '@vueuse/metadata@9.13.0': {}
 
   '@vueuse/shared@10.9.0(vue@3.4.26(typescript@5.4.5))':
@@ -7082,22 +7114,24 @@ snapshots:
       '@webassemblyjs/ast': 1.12.1
       '@xtuc/long': 4.2.2
 
-  '@widget-js/cli@24.1.1-beta.9(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))':
+  '@widget-js/cli@24.1.1-beta.30(async-validator@4.2.5)(vue@3.4.26(typescript@5.4.5))':
     dependencies:
       '@types/archiver': 5.3.4
       '@vue/cli-shared-utils': 5.0.8
-      '@widget-js/core': 24.1.1-beta.9
+      '@widget-js/core': 24.1.1-beta.30
       '@widget-js/ssh-config': 4.2.1
       '@widget-js/utils': 24.1.1-beta.9
-      '@widget-js/vue3': 0.11.20(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))
+      '@widget-js/vue3': 24.1.1-beta.31(async-validator@4.2.5)(axios@1.7.2)(vue@3.4.26(typescript@5.4.5))
       ali-oss: 6.20.0
       archiver: 5.3.2
+      axios: 1.7.2
       chalk: 4.1.2
       change-case: 4.1.2
       commander: 9.5.0
       consola: 2.15.3
       dirname-filename-esm: 1.1.1
       ejs: 3.1.10
+      fast-glob: 3.3.2
       figlet: 1.7.0
       gradient-string: 2.0.2
       inquirer: 8.2.6
@@ -7112,8 +7146,8 @@ snapshots:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - async-validator
-      - axios
       - bufferutil
+      - debug
       - drauu
       - encoding
       - focus-trap
@@ -7128,8 +7162,10 @@ snapshots:
       - utf-8-validate
       - vue
 
-  '@widget-js/core@0.11.20':
+  '@widget-js/core@24.1.1-beta.30':
     dependencies:
+      '@types/css-tree': 2.3.8
+      css-tree: 2.3.1
       localforage: 1.10.0
       lodash: 4.17.21
       path-normalize: 6.0.13
@@ -7142,6 +7178,13 @@ snapshots:
 
   '@widget-js/ssh-config@4.2.1': {}
 
+  '@widget-js/utils@24.1.1-beta.30':
+    dependencies:
+      '@widget-js/core': 24.1.1-beta.30
+      consola: 2.15.3
+      glob: 10.3.12
+      typescript: 5.4.5
+
   '@widget-js/utils@24.1.1-beta.9':
     dependencies:
       '@widget-js/core': 24.1.1-beta.9
@@ -7149,9 +7192,9 @@ snapshots:
       glob: 10.3.12
       typescript: 5.4.5
 
-  '@widget-js/vite-plugin-widget@24.1.1-beta.9(@types/node@20.12.7)(sass@1.76.0)(terser@5.31.0)':
+  '@widget-js/vite-plugin-widget@24.1.1-beta.30(@types/node@20.12.7)(sass@1.76.0)(terser@5.31.0)':
     dependencies:
-      '@widget-js/utils': 24.1.1-beta.9
+      '@widget-js/utils': 24.1.1-beta.30
       consola: 2.15.3
       glob: 10.3.12
       lodash: 4.17.21
@@ -7170,14 +7213,17 @@ snapshots:
       - terser
       - utf-8-validate
 
-  '@widget-js/vue3@0.11.20(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))':
+  '@widget-js/vue3@24.1.1-beta.31(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))':
     dependencies:
+      '@icon-park/vue-next': 1.4.2(vue@3.4.26(typescript@5.4.5))
       '@vueuse/core': 9.13.0(vue@3.4.26(typescript@5.4.5))
       '@vueuse/integrations': 9.13.0(async-validator@4.2.5)(axios@1.6.8)(change-case@5.4.4)(vue@3.4.26(typescript@5.4.5))
       '@vueuse/shared': 10.9.0(vue@3.4.26(typescript@5.4.5))
-      '@widget-js/core': 0.11.20
+      '@widget-js/core': 24.1.1-beta.30
       change-case: 5.4.4
+      consola: 3.2.3
       element-plus: 2.7.2(vue@3.4.26(typescript@5.4.5))
+      popmotion: 11.0.5
       vue-demi: 0.14.7(vue@3.4.26(typescript@5.4.5))
     transitivePeerDependencies:
       - '@vue/composition-api'
@@ -7193,14 +7239,15 @@ snapshots:
       - universal-cookie
       - vue
 
-  '@widget-js/vue3@24.1.1-beta.9(async-validator@4.2.5)(axios@1.6.8)(vue@3.4.26(typescript@5.4.5))':
+  '@widget-js/vue3@24.1.1-beta.31(async-validator@4.2.5)(axios@1.7.2)(vue@3.4.26(typescript@5.4.5))':
     dependencies:
       '@icon-park/vue-next': 1.4.2(vue@3.4.26(typescript@5.4.5))
       '@vueuse/core': 9.13.0(vue@3.4.26(typescript@5.4.5))
-      '@vueuse/integrations': 9.13.0(async-validator@4.2.5)(axios@1.6.8)(change-case@5.4.4)(vue@3.4.26(typescript@5.4.5))
+      '@vueuse/integrations': 9.13.0(async-validator@4.2.5)(axios@1.7.2)(change-case@5.4.4)(vue@3.4.26(typescript@5.4.5))
       '@vueuse/shared': 10.9.0(vue@3.4.26(typescript@5.4.5))
-      '@widget-js/core': 24.1.1-beta.9
+      '@widget-js/core': 24.1.1-beta.30
       change-case: 5.4.4
+      consola: 3.2.3
       element-plus: 2.7.2(vue@3.4.26(typescript@5.4.5))
       popmotion: 11.0.5
       vue-demi: 0.14.7(vue@3.4.26(typescript@5.4.5))
@@ -7415,6 +7462,14 @@ snapshots:
   aws4@1.12.0: {}
 
   axios@1.6.8:
+    dependencies:
+      follow-redirects: 1.15.6(debug@4.3.4)
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+
+  axios@1.7.2:
     dependencies:
       follow-redirects: 1.15.6(debug@4.3.4)
       form-data: 4.0.0
@@ -7797,6 +7852,8 @@ snapshots:
 
   consola@2.15.3: {}
 
+  consola@3.2.3: {}
+
   consolidate@0.15.1(ejs@3.1.10)(lodash@4.17.21):
     dependencies:
       bluebird: 3.7.2
@@ -7930,6 +7987,11 @@ snapshots:
     dependencies:
       mdn-data: 2.0.14
       source-map: 0.6.1
+
+  css-tree@2.3.1:
+    dependencies:
+      mdn-data: 2.0.30
+      source-map-js: 1.2.0
 
   css-what@6.1.0: {}
 
@@ -9545,6 +9607,8 @@ snapshots:
   mdast-util-to-string@2.0.0: {}
 
   mdn-data@2.0.14: {}
+
+  mdn-data@2.0.30: {}
 
   media-typer@0.3.0: {}
 
