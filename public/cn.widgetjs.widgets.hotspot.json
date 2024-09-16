@@ -1,6 +1,6 @@
 {
   "name": "cn.widgetjs.widgets.hotspot",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "author": "Neo Fu",
   "homepage": "https://widgetjs.cn",
   "title": {
@@ -58,42 +58,6 @@
       ]
     },
     {
-      "name": "cn.widgetjs.widgets.hotspot.douyin",
-      "title": {
-        "zh-CN": "抖音热榜"
-      },
-      "description": {
-        "zh-CN": "抖音热榜"
-      },
-      "keywords": [
-        "recommend"
-      ],
-      "security": false,
-      "permissions": [],
-      "lang": "zh-CN",
-      "width": 4,
-      "height": 3,
-      "maxWidth": 6,
-      "webviewTag": false,
-      "maxHeight": 6,
-      "minWidth": 4,
-      "minHeight": 3,
-      "movable": true,
-      "singleton": false,
-      "resizable": true,
-      "path": "/widget/douyin",
-      "meta": {},
-      "backgroundThrottling": true,
-      "previewImage": "/images/preview_douyin.png",
-      "supportDeployMode": 17,
-      "routes": [
-        {
-          "url": "/widget/douyin",
-          "name": "index"
-        }
-      ]
-    },
-    {
       "name": "ccn.widgetjs.widgets.hotspot.weibo",
       "title": {
         "zh-CN": "微博热搜"
@@ -125,6 +89,42 @@
       "routes": [
         {
           "url": "/widget/weibo",
+          "name": "index"
+        }
+      ]
+    },
+    {
+      "name": "cn.widgetjs.widgets.hotspot.douyin",
+      "title": {
+        "zh-CN": "抖音热榜"
+      },
+      "description": {
+        "zh-CN": "抖音热榜"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "security": false,
+      "permissions": [],
+      "lang": "zh-CN",
+      "width": 4,
+      "height": 3,
+      "maxWidth": 6,
+      "webviewTag": false,
+      "maxHeight": 6,
+      "minWidth": 4,
+      "minHeight": 3,
+      "movable": true,
+      "singleton": false,
+      "resizable": true,
+      "path": "/widget/douyin",
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "/images/preview_douyin.png",
+      "supportDeployMode": 17,
+      "routes": [
+        {
+          "url": "/widget/douyin",
           "name": "index"
         }
       ]
