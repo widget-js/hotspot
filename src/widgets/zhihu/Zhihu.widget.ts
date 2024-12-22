@@ -27,6 +27,7 @@ const ZhihuWidgetDefine = new Widget({
   maxWidth: 6,
   maxHeight,
   minWidth,
+  categories: ['news'],
   minHeight,
   path,
   routes: [

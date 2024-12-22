@@ -15,6 +15,7 @@ const DouyinWidgetDefine = new Widget({
   title,
   description,
   keywords,
+  categories: ['news'],
   lang: 'zh-CN',
   width: 4,
   height: 3,

@@ -14,6 +14,7 @@ const BilibiliWidgetDefine = new Widget({
   name,
   title,
   description,
+  categories: ['news'],
   keywords,
   lang: 'zh-CN',
   width: 4,

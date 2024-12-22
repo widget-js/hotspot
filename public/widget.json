@@ -1,6 +1,6 @@
 {
   "name": "cn.widgetjs.widgets.hotspot",
-  "version": "1.3.0",
+  "version": "1.2.0",
   "author": "Neo Fu",
   "homepage": "https://widgetjs.cn",
   "title": {
@@ -49,6 +49,9 @@
       "meta": {},
       "backgroundThrottling": true,
       "previewImage": "/images/preview_zhihu.png",
+      "categories": [
+        "news"
+      ],
       "supportDeployMode": 17,
       "routes": [
         {
@@ -85,6 +88,9 @@
       "meta": {},
       "backgroundThrottling": true,
       "previewImage": "/images/weibo_hot_search.png",
+      "categories": [
+        "news"
+      ],
       "supportDeployMode": 17,
       "routes": [
         {
@@ -121,6 +127,9 @@
       "meta": {},
       "backgroundThrottling": true,
       "previewImage": "/images/preview_douyin.png",
+      "categories": [
+        "news"
+      ],
       "supportDeployMode": 17,
       "routes": [
         {
@@ -157,6 +166,9 @@
       "meta": {},
       "backgroundThrottling": true,
       "previewImage": "/images/bilibili_hot_search.png",
+      "categories": [
+        "news"
+      ],
       "supportDeployMode": 17,
       "routes": [
         {
@@ -193,6 +205,9 @@
       "meta": {},
       "backgroundThrottling": true,
       "previewImage": "/images/preview_bangumi.png",
+      "categories": [
+        "news"
+      ],
       "supportDeployMode": 17,
       "routes": [
         {

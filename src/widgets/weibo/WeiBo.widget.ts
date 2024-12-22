@@ -1,4 +1,5 @@
 import { Widget, WidgetKeyword } from '@widget-js/core'
+
 const name = 'ccn.widgetjs.widgets.hotspot.weibo'
 // 组件标题
 const title = { 'zh-CN': '微博热搜' }
@@ -15,6 +16,7 @@ const WeiBoWidgetDefine = new Widget({
   description,
   keywords,
   lang: 'zh-CN',
+  categories: ['news'],
   width: 4,
   height: 3,
   previewImage: '/images/weibo_hot_search.png',
