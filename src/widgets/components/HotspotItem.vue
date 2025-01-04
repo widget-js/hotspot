@@ -68,6 +68,7 @@ const positionBackgroundColor = computed(() => {
     height: inherit;
     line-height: inherit;
     overflow: hidden;
+    color: var(--widget-color);
     white-space: nowrap;
     text-overflow: ellipsis;
     cursor: pointer;

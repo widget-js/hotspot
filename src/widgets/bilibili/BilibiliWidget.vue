@@ -40,7 +40,7 @@ async function getHotList() {
       <div class="bilibili-header">
         <img src="./images/bilibili_tv.png" style="margin-right: 8px" height="18" alt="">
         <div class="bilibili-title">
-          bilibili热搜
+          Bilibili热搜
         </div>
       </div>
     </template>
@@ -74,7 +74,7 @@ async function getHotList() {
     display: flex;
     flex-direction: row;
     align-items: center;
-    color: #fff;
+    color: var(--widget-color);
     font-size: 14px;
     font-weight: bold;
 

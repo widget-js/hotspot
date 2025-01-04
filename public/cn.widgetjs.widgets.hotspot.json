@@ -157,6 +157,38 @@
       ]
     },
     {
+      "name": "cn.widgetjs.widgets.hotspot.bilibili_rcmd",
+      "title": {
+        "zh-CN": "B站首页推荐"
+      },
+      "description": {
+        "zh-CN": ""
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "security": false,
+      "permissions": [],
+      "lang": "zh-CN",
+      "width": 4,
+      "height": 4,
+      "maxWidth": 4,
+      "webviewTag": false,
+      "maxHeight": 4,
+      "minWidth": 4,
+      "minHeight": 4,
+      "movable": true,
+      "singleton": false,
+      "resizable": true,
+      "path": "/widget/bilibili_rcmd",
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "修改为组件预览图地址",
+      "categories": [],
+      "supportDeployMode": 17,
+      "routes": []
+    },
+    {
       "name": "cn.widgetjs.widgets.hotspot.bilibili",
       "title": {
         "zh-CN": "bilibili热搜"

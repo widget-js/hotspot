@@ -4,7 +4,7 @@ import DouyinWidget from './DouyinWidget.vue'
 </script>
 
 <template>
-  <WidgetWrapper shadow-color="#383a58">
+  <WidgetWrapper>
     <DouyinWidget />
   </WidgetWrapper>
 </template>

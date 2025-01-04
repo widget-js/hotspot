@@ -45,7 +45,7 @@ async function getHotList() {
 <template>
   <HotspotBox class="hotspot-box">
     <template #header>
-      <div style="color: white" class="header">
+      <div class="header">
         <svg
           t="1678001437744"
           class="logo"
@@ -103,7 +103,7 @@ async function getHotList() {
   .header {
     display: flex;
     align-content: center;
-
+    color: var(--widget-color);
     .logo {
       width: 18px;
       height: 18px;

@@ -2,6 +2,7 @@ import { WidgetPackage } from '@widget-js/core'
 
 const widgetPackage = new WidgetPackage({
   remote: {
+    hostname: 'widgetjs.cn',
     entry: 'https://rtugeek.gitee.io/hotspot',
     hash: true,
     base: '/hotspot',

@@ -18,7 +18,7 @@ const { height } = useWindowSize()
       <slot name="header" />
     </div>
     <!--  60是标题高度，24是组件上下空白的间距  -->
-    <ElScrollbar :height="height - 60 - 24" :wrap-style="{ backgroundColor: bodyColor, borderRadius: '12px' }">
+    <ElScrollbar :height="height - 60 - 24" :wrap-style="{ borderRadius: '12px' }">
       <div class="hotspot-content">
         <slot name="body" />
       </div>
@@ -26,7 +26,7 @@ const { height } = useWindowSize()
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 .hotspot-box {
   width: var(--widget-inner-width);
   height: var(--widget-inner-height);
@@ -34,9 +34,13 @@ const { height } = useWindowSize()
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  background-color: var(widget-background-color);
   font-family: OPPOSans-Bold, 'Microsoft Yahei', serif;
   padding: 16px 16px 16px 16px;
 
+  .hotspot-content{
+    background: color-mix(in srgb, var(--widget-background-color), var(--widget-color) 10%);
+  }
   .hotspot-header {
     position: relative;
     width: 100%;
