@@ -36,6 +36,9 @@ const ZhihuWidgetDefine = new Widget({
       name: 'index',
     },
   ],
+  socialLinks: [
+    { name: 'github', link: 'https://github.com/widget-js/hotspot' },
+  ],
 })
 
 export default ZhihuWidgetDefine

@@ -49,11 +49,20 @@
       "meta": {},
       "backgroundThrottling": true,
       "previewImage": "/images/preview_zhihu.png",
+      "categories": [
+        "news"
+      ],
       "supportDeployMode": 17,
       "routes": [
         {
           "url": "/widget/zhihu",
           "name": "index"
+        }
+      ],
+      "socialLinks": [
+        {
+          "name": "github",
+          "link": "https://github.com/widget-js/hotspot"
         }
       ]
     },
@@ -85,11 +94,20 @@
       "meta": {},
       "backgroundThrottling": true,
       "previewImage": "/images/weibo_hot_search.png",
+      "categories": [
+        "news"
+      ],
       "supportDeployMode": 17,
       "routes": [
         {
           "url": "/widget/weibo",
           "name": "index"
+        }
+      ],
+      "socialLinks": [
+        {
+          "name": "github",
+          "link": "https://github.com/widget-js/hotspot"
         }
       ]
     },
@@ -121,11 +139,20 @@
       "meta": {},
       "backgroundThrottling": true,
       "previewImage": "/images/preview_douyin.png",
+      "categories": [
+        "news"
+      ],
       "supportDeployMode": 17,
       "routes": [
         {
           "url": "/widget/douyin",
           "name": "index"
+        }
+      ],
+      "socialLinks": [
+        {
+          "name": "github",
+          "link": "https://github.com/widget-js/hotspot"
         }
       ]
     },
@@ -157,11 +184,20 @@
       "meta": {},
       "backgroundThrottling": true,
       "previewImage": "/images/bilibili_hot_search.png",
+      "categories": [
+        "news"
+      ],
       "supportDeployMode": 17,
       "routes": [
         {
           "url": "/widget/bilibili",
           "name": "index"
+        }
+      ],
+      "socialLinks": [
+        {
+          "name": "github",
+          "link": "https://github.com/widget-js/hotspot"
         }
       ]
     },
@@ -193,11 +229,20 @@
       "meta": {},
       "backgroundThrottling": true,
       "previewImage": "/images/preview_bangumi.png",
+      "categories": [
+        "news"
+      ],
       "supportDeployMode": 17,
       "routes": [
         {
           "url": "/widget/bangumi",
           "name": "index"
+        }
+      ],
+      "socialLinks": [
+        {
+          "name": "github",
+          "link": "https://github.com/widget-js/hotspot"
         }
       ]
     }
