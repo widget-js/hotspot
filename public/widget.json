@@ -1,6 +1,6 @@
 {
   "name": "cn.widgetjs.widgets.hotspot",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "author": "Neo Fu",
   "homepage": "https://widgetjs.cn",
   "title": {
@@ -159,10 +159,12 @@
     {
       "name": "cn.widgetjs.widgets.hotspot.bilibili_rcmd",
       "title": {
-        "zh-CN": "B站首页推荐"
+        "zh-CN": "B站推荐",
+        "en-US": "Bilibili Recommend"
       },
       "description": {
-        "zh-CN": ""
+        "zh-CN": "实时获取B站推荐视频，发现更多精彩内容",
+        "en-US": "Discover more exciting content"
       },
       "keywords": [
         "recommend"
@@ -172,9 +174,9 @@
       "lang": "zh-CN",
       "width": 4,
       "height": 4,
-      "maxWidth": 4,
+      "maxWidth": 6,
       "webviewTag": false,
-      "maxHeight": 4,
+      "maxHeight": 6,
       "minWidth": 4,
       "minHeight": 4,
       "movable": true,
@@ -183,10 +185,18 @@
       "path": "/widget/bilibili_rcmd",
       "meta": {},
       "backgroundThrottling": true,
-      "previewImage": "修改为组件预览图地址",
-      "categories": [],
+      "previewImage": "/images/preview_bilibili_rcmd.png",
+      "categories": [
+        "news"
+      ],
       "supportDeployMode": 17,
-      "routes": []
+      "routes": [],
+      "socialLinks": [
+        {
+          "name": "github",
+          "link": "https://github.com/widget-js/hotspot"
+        }
+      ]
     },
     {
       "name": "cn.widgetjs.widgets.hotspot.bilibili",

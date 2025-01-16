@@ -115,6 +115,10 @@ useIntervalFn(() => {
     }
   }
 
+  .zhihu-hot-count{
+    color: var(--widget-color);
+  }
+
   .zhihu-hot {
     &-count {
       display: inline-block;

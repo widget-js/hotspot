@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import axios from 'axios'
-import { useIntervalFn } from '@vueuse/core'
 import type { Ref } from 'vue'
 import { nextTick, onMounted, ref } from 'vue'
+import { useIntervalFn } from '@vueuse/core'
 import type { WeiBoModel } from './model/WeiBoModel'
 import HotspotBox from '@/widgets/components/HotspotBox.vue'
 import HotspotItem from '@/widgets/components/HotspotItem.vue'
@@ -94,7 +94,7 @@ async function getHotList() {
     }
   }
   .weibo-label {
-    width: 18px;
+    padding: 0 3px;
     height: 18px;
     font-size: 12px;
     text-align: center;

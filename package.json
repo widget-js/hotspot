@@ -17,7 +17,7 @@
     "lint:fix": "eslint --cache . --fix"
   },
   "dependencies": {
-    "@vueuse/core": "^9.4.0",
+    "@vueuse/core": "^12.4.0",
     "@widget-js/core": "^24.1.1-beta.44",
     "@widget-js/vue3": "^24.1.1-beta.48",
     "axios": "^1.1.3",
