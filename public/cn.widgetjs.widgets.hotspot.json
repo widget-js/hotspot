@@ -1,6 +1,6 @@
 {
   "name": "cn.widgetjs.widgets.hotspot",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "author": "Neo Fu",
   "homepage": "https://widgetjs.cn",
   "title": {
@@ -65,6 +65,40 @@
           "link": "https://github.com/widget-js/hotspot"
         }
       ]
+    },
+    {
+      "name": "cn.widgetjs.widgets.hotspot.tou_tiao",
+      "title": {
+        "zh-CN": "头条热榜"
+      },
+      "description": {
+        "zh-CN": "今日头条热度榜单"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "security": false,
+      "permissions": [],
+      "lang": "zh-CN",
+      "width": 4,
+      "height": 4,
+      "maxWidth": 6,
+      "webviewTag": false,
+      "maxHeight": 6,
+      "minWidth": 4,
+      "minHeight": 4,
+      "movable": true,
+      "singleton": false,
+      "resizable": true,
+      "path": "/widget/tou_tiao",
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "/images/preview_toutiao.png",
+      "categories": [
+        "news"
+      ],
+      "supportDeployMode": 17,
+      "routes": []
     },
     {
       "name": "cn.widgetjs.widgets.hotspot.douyin",
