@@ -23,6 +23,7 @@ const ZhihuWidgetDefine = new Widget({
   keywords,
   lang,
   width,
+  disabled: true,
   height,
   maxWidth: 6,
   maxHeight,
@@ -30,12 +31,6 @@ const ZhihuWidgetDefine = new Widget({
   categories: ['news'],
   minHeight,
   path,
-  routes: [
-    {
-      url: path,
-      name: 'index',
-    },
-  ],
   socialLinks: [
     { name: 'github', link: 'https://github.com/widget-js/hotspot' },
   ],

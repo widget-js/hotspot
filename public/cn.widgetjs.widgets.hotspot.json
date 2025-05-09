@@ -1,6 +1,6 @@
 {
   "name": "cn.widgetjs.widgets.hotspot",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "author": "Neo Fu",
   "homepage": "https://widgetjs.cn",
   "title": {
@@ -21,51 +21,6 @@
   "hash": true,
   "url": "",
   "widgets": [
-    {
-      "name": "cn.widgetjs.widgets.hotspot.zhihu",
-      "title": {
-        "zh-CN": "知乎"
-      },
-      "description": {
-        "zh-CN": "知乎热榜与日报"
-      },
-      "keywords": [
-        "recommend"
-      ],
-      "security": false,
-      "permissions": [],
-      "lang": "zh-CN",
-      "width": 4,
-      "height": 3,
-      "maxWidth": 6,
-      "webviewTag": false,
-      "maxHeight": 4,
-      "minWidth": 4,
-      "minHeight": 3,
-      "movable": true,
-      "singleton": false,
-      "resizable": true,
-      "path": "/widget/zhihu",
-      "meta": {},
-      "backgroundThrottling": true,
-      "previewImage": "/images/preview_zhihu.png",
-      "categories": [
-        "news"
-      ],
-      "supportDeployMode": 17,
-      "routes": [
-        {
-          "url": "/widget/zhihu",
-          "name": "index"
-        }
-      ],
-      "socialLinks": [
-        {
-          "name": "github",
-          "link": "https://github.com/widget-js/hotspot"
-        }
-      ]
-    },
     {
       "name": "ccn.widgetjs.widgets.hotspot.weibo",
       "title": {
@@ -155,6 +110,41 @@
           "link": "https://github.com/widget-js/hotspot"
         }
       ]
+    },
+    {
+      "name": "cn.widgetjs.widgets.hotspot.cls_telegraph",
+      "title": {
+        "zh-CN": "财联社电报"
+      },
+      "description": {
+        "zh-CN": "每5分钟刷新一次"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "security": false,
+      "permissions": [],
+      "lang": "zh-CN",
+      "width": 4,
+      "height": 4,
+      "maxWidth": 6,
+      "webviewTag": false,
+      "maxHeight": 6,
+      "minWidth": 4,
+      "minHeight": 4,
+      "movable": true,
+      "singleton": false,
+      "resizable": true,
+      "path": "/widget/cls_telegraph",
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "/images/preview_cls_telegraph.png",
+      "categories": [
+        "finance",
+        "news"
+      ],
+      "supportDeployMode": 17,
+      "routes": []
     },
     {
       "name": "cn.widgetjs.widgets.hotspot.bilibili_rcmd",

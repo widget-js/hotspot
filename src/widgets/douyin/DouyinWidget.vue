@@ -35,7 +35,6 @@ const service = axios.create({
   timeout: 50000,
 })
 
-// 知乎热榜
 async function getHotList() {
   const res = await service.get('/aweme/v1/hot/search/list/')
   viewList.value = res.data.data.word_list

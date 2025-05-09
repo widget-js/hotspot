@@ -81,11 +81,3 @@ button:active {
   display: flex;
   align-items: flex-end;
 }
-
-.gap-1 {
-  gap: 1rem;
-}
-
-.gap-2 {
-  gap: 2rem;
-}
