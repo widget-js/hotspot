@@ -17,6 +17,7 @@ export default new WidgetPackage({
   name: 'cn.widgetjs.widgets.hotspot',
   remoteEntry: 'https://widgetjs.cn/hotspot',
   remotePackage: 'https://widgetjs.cn/hotspot/widget.json',
+  zipUrl: 'https://widgetjs.cn/hotspot/widget.zip',
   title: {
     'zh-CN': '全网热点组件',
   },
