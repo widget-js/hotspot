@@ -24,6 +24,7 @@ const WeiBoWidgetDefine = new Widget({
   maxWidth: 6,
   minHeight: 3,
   maxHeight: 6,
+  disabled: true,
   path,
   routes: [
     {
