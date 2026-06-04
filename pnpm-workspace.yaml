@@ -1,0 +1,9 @@
+allowBuilds:
+  '@parcel/watcher': true
+  cpu-features: true
+  esbuild: true
+  sharp: true
+  simple-git-hooks: true
+  ssh2: true
+  unrs-resolver: true
+  vue-demi: true

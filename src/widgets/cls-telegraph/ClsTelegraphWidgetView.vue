@@ -6,21 +6,27 @@ import { ref } from 'vue'
 import HotspotBox from '@/widgets/components/HotspotBox.vue'
 import HotspotItem from '@/widgets/components/HotspotItem.vue'
 
-interface Item {
+interface TelegraphItem {
   id: number
-  title?: string
+  title: string
   brief: string
-  shareurl: string
-  // need *1000
+  content: string
   ctime: number
-  // 1
-  is_ad: number
 }
 interface TelegraphRes {
+  errno: number
   data: {
-    roll_data: Item[]
+    l: Record<string, TelegraphItem>
+    i: number
+    a: number
   }
 }
+
+function getApiUrl() {
+  const lastTime = Math.floor(Date.now() / 1000)
+  return `https://www.cls.cn/api/cache?app=CailianpressWeb&lastTime=${lastTime}&name=refreshTenTelegraph&os=web&sv=8.7.9`
+}
+
 const viewList = ref<{ title: string, url: string, id: number }[]>([])
 useWidget()
 useIntervalFn(() => {
@@ -28,17 +34,14 @@ useIntervalFn(() => {
 }, 5 * 60 * 1000, { immediate: true, immediateCallback: true })
 
 async function getHotList() {
-  const res = await axios.get('https://www.cls.cn/nodeapi/updateTelegraphList')
+  const res = await axios.get(getApiUrl())
   const data = res.data as TelegraphRes
-  viewList.value = data.data.roll_data.filter(k => !k.is_ad).map((k) => {
-    return {
-      id: k.id,
-      title: k.title || k.brief,
-      mobileUrl: k.shareurl,
-      pubDate: k.ctime * 1000,
-      url: `https://www.cls.cn/detail/${k.id}`,
-    }
-  })
+  const list = Object.values(data.data?.l ?? {}).sort((a, b) => b.ctime - a.ctime)
+  viewList.value = list.map(k => ({
+    id: k.id,
+    title: k.title || k.brief || k.content,
+    url: `https://www.cls.cn/detail/${k.id}`,
+  }))
 }
 </script>
 

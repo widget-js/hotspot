@@ -1,12 +1,12 @@
 {
   "name": "@widget-js/hotspot",
   "type": "module",
-  "version": "1.8.0",
+  "version": "26.6.5",
   "private": true,
   "author": "Widget JS",
   "license": "MIT",
   "scripts": {
-    "serve": "vite",
+    "dev": "vite",
     "build": "vite build",
     "build:offline": "vite build --mode offline",
     "preview": "vite preview",
@@ -42,7 +42,7 @@
     "@vue/compiler-sfc": "^3.2.45",
     "@vueuse/shared": "^10.1.2",
     "@widget-js/cli": "^24.1.1-beta.70",
-    "@widget-js/vite-plugin-widget": "^24.1.1-beta.71",
+    "@widget-js/vite-plugin-widget": "^24.1.1-beta.72",
     "css-loader": "^6.7.2",
     "eslint": "8.48.0",
     "lint-staged": "^15.2.0",
@@ -60,16 +60,6 @@
     "vite": "^7.1.11",
     "vue-loader": "^16.8.3",
     "vue-tsc": "^1.0.11"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "react",
-        "react-dom",
-        "rollup",
-        "@types/react"
-      ]
-    }
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
