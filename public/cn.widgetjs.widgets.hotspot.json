@@ -1,6 +1,6 @@
 {
   "name": "cn.widgetjs.widgets.hotspot",
-  "version": "26.6.4",
+  "version": "26.6.11",
   "author": "Neo Fu",
   "homepage": "https://widgetjs.cn",
   "title": {
@@ -22,6 +22,43 @@
   "hash": true,
   "url": "",
   "widgets": [
+    {
+      "name": "cn.widgetjs.widgets.hotspot.world_cup",
+      "title": {
+        "zh-CN": "2026世界杯",
+        "en-US": "World Cup"
+      },
+      "description": {
+        "zh-CN": "展示世界杯赛程相关的信息",
+        "en-US": "Show World Cup related information"
+      },
+      "keywords": [
+        "recommend"
+      ],
+      "security": false,
+      "permissions": [],
+      "lang": "zh-CN",
+      "width": 6,
+      "height": 6,
+      "maxWidth": 6,
+      "webviewTag": false,
+      "maxHeight": 6,
+      "minWidth": 4,
+      "minHeight": 4,
+      "movable": true,
+      "singleton": false,
+      "resizable": true,
+      "path": "/widget/world_cup",
+      "meta": {},
+      "backgroundThrottling": true,
+      "previewImage": "/images/preview_world_cup.png",
+      "categories": [
+        "news"
+      ],
+      "supportDeployMode": 17,
+      "configPagePath": "/widget/config/world_cup?width=600&height=500&frame=true&transparent=false",
+      "routes": []
+    },
     {
       "name": "cn.widgetjs.widgets.hotspot.tou_tiao",
       "title": {
